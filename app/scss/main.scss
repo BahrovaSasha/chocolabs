@@ -1,16 +1,9 @@
 @import "vars";
 @import "fonts";
 @import "libs";
-
-::placeholder {
-	color: #666;
+html{
+	font-size: 10px;
 }
-
-::selection {
-	background-color: $accent;
-	color: #fff;
-}
-
 body {
 	font-size: 16px;
 	min-width: 320px;
@@ -18,18 +11,22 @@ body {
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
-	color: $text;
-	input, textarea {
-		border: #666 1px solid;
-		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
-	}
+	background-color: #fff;
+
 }
+
+// 	color: $text;
+// 	input, textarea {
+// 		border: #666 1px solid;
+// 		outline: none;
+// 		&:focus:required:invalid {
+// 			border-color: red;
+// 		}
+// 		&:required:valid {
+// 			border-color: green;
+// 		}
+// 	}
+// }
 
 .img-responsive {
 	display: block;
@@ -40,14 +37,100 @@ body {
 	}
 }
 
-.text-center {
-	text-align: center;
+.main_header:before {
+	content: '';
+	background: url(../img/mainimg.jpg) no-repeat 0 100%;
+	background-size: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 }
-
-b, strong {
-	font-weight: bold;
+.main_header{
+	background: rgba(36,20,42,0.4);
+	height: 100vh;
+	color: $text-white;
+	a{
+		color: $text-white;
+	}
 }
+.logo{
+	max-width: 484px;
+}
+.container_big{
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 5.4rem 0 1.6rem;
+}
+.header_menu{
+	padding: 54px 0;
+	display: flex;
+	justify-content: space-between;
+}
+.details{
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	text-align: right;
 
+
+
+}
+.flex_menu{
+	display: flex;
+	justify-content: flex-end;
+	list-style-type: none;
+	li{
+		padding-left: 6.8rem;
+	}
+}
+.contacts{
+	display: inline-flex;
+	justify-content: flex-end;
+}
+.phone{
+
+}
+.social-icons{
+	padding-left: 4rem;
+	a{
+		padding-left: 1.8rem;
+	}
+}
+.container_small{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header_content:before{
+	content: '';
+	position: absolute;
+	left: 7%;
+	top: 22.8rem;
+	width: 62rem;
+	height: 62rem;
+	border: 16px solid rgba(114, 107, 177, 0.4);
+	z-index: 0;
+}
+.header_content{
+	padding-top: 16.2rem;
+	text-transform: uppercase;
+	h1{
+		font-size: 10rem;
+		line-height: 1.08;
+		padding-bottom: 6.2rem;
+		position: relative;
+	}
+	h3{
+		font-size: 4.2rem;
+		opacity: 0.6;
+		padding-bottom: 9.4rem;
+		position: relative;
+	}
+}
+.show_more{
+	font-size: 1.8rem;
+}
 
 
 @import "media"; // Always at the end
