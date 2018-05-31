@@ -1,6 +1,11 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+*{
+	margin: 0px;
+	padding: 0;
+	box-sizing: border-box;
+}
 html{
 	font-size: 10px;
 }
@@ -12,75 +17,107 @@ body {
 	font-family: $default-font;
 	overflow-x: hidden;
 	background-color: #fff;
+	ul{
+		list-style-type: none;
+	}
+	p{
+		font-size: 18px;
+		font-family:  $text-font;
+		color: $text-dark;
+		padding-bottom: 2.5rem;
+	}
+	a{
+		transition: 0.3s;
+		&:hover{
+				text-decoration: none;
+				color: $extra-accent;
+		}
+	}
+	main{
+		a{
+			color: $text-dark;
+
+		}
+	}
 
 }
-
-// 	color: $text;
-// 	input, textarea {
-// 		border: #666 1px solid;
-// 		outline: none;
-// 		&:focus:required:invalid {
-// 			border-color: red;
-// 		}
-// 		&:required:valid {
-// 			border-color: green;
-// 		}
+//
+// .img-responsive {
+// 	display: block;
+// 	max-width: 100%;
+// 	height: auto;
+// 	&.img-width {
+// 		width: 100%;
 // 	}
 // }
 
-.img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	&.img-width {
+
+.main_header{
+	background: rgba(36,20,42,0.4);
+	min-height: 700px;
+	height: 100vh;
+	position: relative;
+	color: $text-white;
+	&:before {
+		content: '';
+		background: url(../img/mainimg.jpg) no-repeat 0 100%;
+		background-size: cover;
+		background-position: bottom;
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 100%;
+		height: 100%;
+		z-index: -2;
+	}
+	a{
+		color: $text-white;
+
 	}
 }
 
-.main_header:before {
-	content: '';
-	background: url(../img/mainimg.jpg) no-repeat 0 100%;
-	background-size: cover;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-}
-.main_header{
-	background: rgba(36,20,42,0.4);
-	height: 100vh;
-	color: $text-white;
-	a{
-		color: $text-white;
-	}
-}
-.logo{
-	max-width: 484px;
-}
+
 .container_big{
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: 5.4rem 0 1.6rem;
-}
+	&:before{
+		content: 'choco';
+		position: absolute;
+		font-size: 50rem;
+		color: $text-dark;
+		text-transform: uppercase;
+		opacity: 0.12;
+		left: 52%;
+		z-index: -1;
+	}
+	}
+
 .header_menu{
 	padding: 54px 0;
 	display: flex;
 	justify-content: space-between;
+
+	.logo{
+		img{
+		max-width: 100%;
+		height: auto;
+		// &:hover{
+		// 	color: $extra-backcolor;//! оверлей логотипа??
+		// }
+		}
+	}
+
 }
 .details{
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	text-align: right;
-
-
-
 }
 .flex_menu{
 	display: flex;
 	justify-content: flex-end;
-	list-style-type: none;
+	white-space: nowrap;//??????
 	li{
 		padding-left: 6.8rem;
 	}
@@ -101,36 +138,412 @@ body {
 .container_small{
 	max-width: 1200px;
 	margin: 0 auto;
-}
-.header_content:before{
-	content: '';
-	position: absolute;
-	left: 7%;
-	top: 22.8rem;
-	width: 62rem;
-	height: 62rem;
-	border: 16px solid rgba(114, 107, 177, 0.4);
-	z-index: 0;
+	position: relative;
+	display: flex;
+
 }
 .header_content{
-	padding-top: 16.2rem;
-	text-transform: uppercase;
+	position: relative;
+}
+.header_description{
+	position: absolute;
+	top: 8rem;
+	margin: auto;
+	display: flex;
+	align-items: flex-start;
+	justify-content:center;
+	flex-direction: column;
+	&:before{
+		content: '';
+		position: absolute;
+		left: -10%;
+		width: 62rem;
+		height: 62rem;
+		border: 16px solid rgba(114, 107, 177, 0.4);
+		z-index: 0;
+	}
+
 	h1{
 		font-size: 10rem;
-		line-height: 1.08;
-		padding-bottom: 6.2rem;
+		line-height: 1.1;
+		padding-bottom: 2rem;
 		position: relative;
+		text-transform: uppercase;
 	}
 	h3{
 		font-size: 4.2rem;
 		opacity: 0.6;
-		padding-bottom: 9.4rem;
+		padding-bottom: 8rem;
 		position: relative;
+		text-transform: uppercase;
 	}
 }
-.show_more{
+
+.more_inf{
 	font-size: 1.8rem;
+	position: relative;
+	span{
+		z-index: 1;
+		position: relative;
+	}
+	&:before{
+		content:'';
+		position: absolute;
+		width: 4.8rem;
+		height: 4.8rem;
+		background-color: $extra-accent;
+		opacity: 0.6;
+		left: 11.5rem;
+		bottom: -0.5rem;
+		z-index: 0;
+	}
 }
+
+.story_content{
+	padding: 14rem 0 14rem;
+	position: relative;
+	&:before{
+		content: 'choco';
+		position: absolute;
+		font-size: 13.6rem;
+		color: $accent;
+		text-transform: uppercase;
+		transition: rotate(180deg);
+		left: -25%;
+		top: 20%;
+		writing-mode: vertical-lr;
+		z-index: 0;
+	}
+	.row{
+		align-items: flex-end;
+	}
+}
+.first_column_story{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	.more_inf{
+		right: 3.2rem;
+		bottom: 0.5rem;
+	}
+	&:before{
+		content: 'c';
+		position: absolute;
+		font-size: 84rem;
+		color: $extra-backcolor;
+		text-transform: uppercase;
+		right: 50%;
+		top:-80%;
+		transform: rotate(180deg);
+		z-index: -1;
+	}
+}
+.second_column_story{
+	position: relative;
+	top: 4rem;///??????
+.girl_img{
+	height: 40rem;
+	width: 100%;
+	background: url(../img/dog_girl.jpg) no-repeat center center;
+	background-size: cover;
+	top: -130%;
+	position: absolute;
+	box-shadow: 0 8px 14px rgba(6,6,6,0.2)
+	}
+}
+// .col_img{
+// 	img{
+// 		display:block;
+// width:100%;
+// max-width:100%;
+// height:auto;
+// 	}
+// }
+// .second_column{
+// 	position: relative;
+// .col_img{
+// 	height: 40rem;
+// 	width: 100%;
+//
+// 	position: absolute;
+// 	top: -150%;
+// 	overflow: hidden;
+//
+// 	img{
+// 		object-fit: cover;//не работает почемуто
+// 	}
+// }
+//
+// }
+
+// .second_column{
+// 	position: relative;
+// 	&:before{
+// 		content: url(../img/dog_girl.jpg) ;
+// 		position: absolute;
+// 		height: 40rem;
+// 		top: -130%;
+// 		background-clip: padding-box;
+// 	}
+//
+// }
+// .col_img{
+// 	height: 40rem;
+// 	width: auto;
+// 	position: relative;
+// 	img{
+// 		position: absolute;
+// 	}
+// }
+
+
+	.dark_h{
+		font-size: 7.2rem;
+		color: $text-dark;
+		text-transform: uppercase;
+		line-height: 1.1;
+		padding-bottom: 4.8rem;
+	}
+
+	.violet_h{
+		font-size: 4.2rem;
+		text-transform: uppercase;
+		color: $accent;
+		padding-bottom: 2.8rem;
+	}
+	// .photo_background{
+	// 	height: 526px;
+	// 	position: relative;
+	// 	&:before {
+	// 		content: '';
+	// 		background: url(../img/dog_child.jpg) no-repeat 0 100%;
+	// 		background-size: cover;
+	// 		background-position:top;
+	// 		position: absolute;
+	// 		left: 0;
+	// 		top: 0;
+	// 		width: 100%;
+	// 		height: 100%;
+	// 		z-index: -2;
+	// 	}
+	// }
+	.light-overlay{
+		position: relative;
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $extra-backcolor;
+			opacity: 0.7;
+		}
+	}
+	.our_puppies{
+		height: 672px;
+		background: url(../img/puppi.jpg) no-repeat 0 100%;
+		background-size: cover;
+		background-position: top;
+	}
+	.puppies_content{
+		padding: 12rem 0 0;
+	}
+.first_column_puppi{
+	position: relative;
+	.puppi_img{
+		height: 40rem;
+		width: 100%;
+		background: url(../img/puppies.jpg) no-repeat center center;
+		background-size: cover;
+		top: 100%;
+		position: absolute;
+		box-shadow: 0 8px 14px rgba(6,6,6,0.2);
+		z-index: 1;
+		}
+	}
+.second_column_puppi{
+	font: 1.8rem "roboto-light";
+	position: relative;
+	li{
+		padding: 3.6rem 0;
+		padding-left: 14%;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 3rem;
+			height: 3rem;
+			background-color: #fff;
+			border-radius: 3rem;
+			left: 0;
+		}
+	}
+}
+.our_dogs{
+	padding: 19rem 0 9rem;
+}
+.img_dog{
+	height: 55.6rem;////????
+	width: 100%;
+	margin: 4.4rem 0 0;
+	position: relative;
+	overflow: hidden;
+	&:hover{
+		color: $accent;/////?????????????
+	}
+	img{
+		position: absolute;
+		width: auto;
+		height: 100%;
+		margin: 0 auto;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%)
+	}
+}
+.img_dogs{
+	width: 100%;
+	
+}
+
+.second_column_dog{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	.more_inf{
+		right: 3.2rem;
+		bottom: 0.5rem;
+	}
+}
+// .first_column_dog{
+// 	.dog1{
+// 	position: relative;
+// 	overflow: hidden;
+// 	img{
+// 		position: absolute;
+// 	}
+// 	}
+// 	.dog2{
+//
+// 	}
+// }
+
+
+// .first_column_dog{
+// 	position: relative;
+
+// 	img{
+// 		overflow: hidden;
+// 		object-fit: cover;
+//
+// 	}
+	// .img_dog{
+	// 	width: 100%;
+	// 	height: 560px;
+	// 	display: block;
+	// 	position: absolute;
+	// 	img{
+	// 		overflow: hidden;
+	// 	}
+	// 	}
+	// }
+
+.reviews{
+	background-color: $extra-backcolor;
+	position: relative;
+	display: flex;
+	align-items: center;
+	.review_inner{
+		width: 55%;
+		margin: 0 auto;
+	}
+}
+
+
+.reviews_content{
+	padding: 8rem 0;
+	.review_item{
+		text-align: center;
+		&:before{
+			content: '' ;
+			background: url(../img/quot.png) no-repeat center center;
+			width: 6.2rem;
+			height: 5.8rem;
+			background-size: contain;
+			display: block;
+    	margin: 0 auto;
+
+		}
+	}
+	h5{
+		font-size: 3.6rem;
+		padding: 4rem 0;
+	}
+	p{
+		font-size: 2.1rem;
+		font-style: italic;
+	}
+	h6{
+		font-size: 1.8rem;
+		padding-top: 2.4rem;
+	}
+
+}
+.arrow{
+	padding: 0 6.8rem;
+	font-size: 4rem;
+	color: $extra-accent;
+	&:hover{
+		cursor: pointer;
+		color: $accent;
+	}
+}
+.avatar{
+	position: relative;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	margin: 0 auto;
+	overflow: hidden;
+	img{
+		position: absolute;
+		width: auto;
+		height: 100%;///?????
+	}
+}
+.blog{
+	padding: 12.6rem 0;
+	.blog_head{
+		text-align: center;
+		width: 55%;
+		margin: 0 auto;
+	}
+}
+
+
+
+	.footer_background{
+		height: 526px;
+		background: url(../img/dog_child.jpg) no-repeat 0 100%;
+		background-size: cover;
+		background-position: top;
+	}
+
+
+	.foot_content{
+		padding: 10rem 0 0;
+		.address{
+			padding: 10rem 0;
+			font: "montserrat-bold", 1.8rem;
+			text-align: right;
+		}
+	}
+
+
 
 
 @import "media"; // Always at the end
