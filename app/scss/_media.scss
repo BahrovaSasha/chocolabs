@@ -1,101 +1,58 @@
 @import "vars";
 
+// Extra small devices
+$screen-xs-max: 350;
 
-/*==========  Desktop First  ==========*/
-@include media-breakpoint-down(large){
-	.container_big{
-		max-width: 1400px;
-	}
-	.container_small{
-		max-width: 1000px;
-	}
-	.header_description{
-		top: 4rem;
-		&:before{
-			width: 50rem;
-			height: 50rem;
-		}
-		h1{
-			font-size: 8rem;
-		}
-		h3{
-			font-size: 3rem;
-		}
-	}
-	.img_dog{
-		height: 45rem;
-	}
-}
-// ≥1200px
-@include media-breakpoint-down(lg) {
-	.container_big{
-		max-width: 1100px;
-	}
-	.container_small{
-		max-width: 800px;
-	}
-	.header_description{
-		&:before{
-			width: 40rem;
-			height: 40rem;
-		}
-		h1{
-			font-size: 6rem;
-		}
-		h3{
-			font-size: 2rem;
-		}
-	}
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576;
 
-	.logo{
-		img{
-		min-width: 80%;
-		}
-	}
-	.details{
-		font-size: 1.6rem;
-	}
-	.header_content{
-		padding-top: 14rem;
-	}
-	.flex_menu{
-		li{
-			padding-left: 4rem;
-		}
-	}
-}
-.second_column{
-.col_img{
+// Small tablets (portrait view)
+$screen-md-max: 768;
 
-	}
+// Tablets and small desktops
+$screen-lg-max: 992;
+
+// Large tablets and desktops
+$screen-xl-max: 1200;
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (max-width: $screen + "px") {
+    @content;
+  }
 }
 
-// ≥992px
-@include media-breakpoint-down(md) {
-	.container_big{
-		max-width: 760px;
-	}
-	.container_small{
-		max-width: 760px;
-	}
-	.logo{
-		img{
-		min-width: 60%;
-		}
-	}
-}
-.col_img{
-	top: 0;
+// Extra large devices
+@mixin xl {
+  @media only screen and (max-width: $screen-xl-max + "px") {
+    @content;
+  }
 }
 
-
-
-// ≥768px
-@include media-breakpoint-down(sm) {
-
+// Large devices
+@mixin lg {
+  @media only screen and (max-width: $screen-lg-max + "px") {
+    @content;
+  }
 }
 
-// ≥576px
-@include media-breakpoint-down(xs) {
+// Medium devices
+@mixin md {
+  @media only screen and (max-width: $screen-md-max + "px") {
+    @content;
+  }
+}
 
+// Small devices
+@mixin sm {
+  @media only screen and (max-width: $screen-sm-max + "px") {
+    @content;
+  }
+}
+
+// Extra-small devices
+@mixin xs {
+  @media only screen and (max-width: $screen-xs-max + "px") {
+    @content;
+  }
 }

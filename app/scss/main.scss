@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+@import "media";
 *{
 	margin: 0px;
 	padding: 0;
@@ -82,7 +83,7 @@ body {
 	margin: 0 auto;
 	padding: 5.4rem 0 1.6rem;
 	&:before{
-		content: 'choco';
+		content: 'choс';
 		position: absolute;
 		font-size: 50rem;
 		color: $text-dark;
@@ -91,28 +92,57 @@ body {
 		left: 52%;
 		z-index: -1;
 	}
-	}
-
-.header_menu{
-	padding: 54px 0;
-	display: flex;
-	justify-content: space-between;
-
-	.logo{
-		img{
-		max-width: 100%;
-		height: auto;
-		// &:hover{
-		// 	color: $extra-backcolor;//! оверлей логотипа??
-		// }
+		@include rwd(1600) {
+			max-width: 1400px;
+		}
+		@include lg {
+			max-width: 1100px;
+		}
+		@include md {
+			max-width: 760px;
 		}
 	}
 
-}
+.container_small{
+		max-width: 1200px;
+		margin: 0 auto;
+		position: relative;
+		display: flex;
+		@include rwd(1600){
+			max-width: 1000px;
+		}
+		@include xl{
+			max-width: 960px;
+		}
+		@include lg{
+			max-width: 900px;
+		}
+		@include md{
+			max-width: 760px;
+		}
+	}
+
+.header_menu{
+	padding: 5.4rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	.logo {
+		img{
+			max-width: 100%;
+			height: auto;
+				@include md {
+					max-width: 10%
+				}
+			}
+		}
+	}
 .details{
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	text-align: right;
+	@include lg{
+		font-size: 1.6rem;
+	}
 }
 .flex_menu{
 	display: flex;
@@ -120,6 +150,11 @@ body {
 	white-space: nowrap;//??????
 	li{
 		padding-left: 6.8rem;
+	}
+	@include lg{
+		li{
+			padding-left: 4rem;
+		}
 	}
 }
 .contacts{
@@ -135,17 +170,15 @@ body {
 		padding-left: 1.8rem;
 	}
 }
-.container_small{
-	max-width: 1200px;
-	margin: 0 auto;
-	position: relative;
-	display: flex;
 
-}
 .header_content{
 	position: relative;
+	@include lg{
+		padding-top: 14rem;
+	}
 }
-.header_description{
+
+.header_description {
 	position: absolute;
 	top: 8rem;
 	margin: auto;
@@ -162,7 +195,6 @@ body {
 		border: 16px solid rgba(114, 107, 177, 0.4);
 		z-index: 0;
 	}
-
 	h1{
 		font-size: 10rem;
 		line-height: 1.1;
@@ -176,6 +208,34 @@ body {
 		padding-bottom: 8rem;
 		position: relative;
 		text-transform: uppercase;
+	}
+	@include rwd(1600){
+		top: 4rem;
+		&:before{
+			width: 50rem;
+			height: 50rem;
+		}
+		h1{
+			font-size: 8rem;
+		}
+		h3{
+			font-size: 3rem;
+		}
+	}
+	@include xl{
+		left: 10%;
+	}
+	@include lg{
+		&:before{
+			width: 40rem;
+			height: 40rem;
+		}
+		h1{
+			font-size: 6rem;
+		}
+		h3{
+			font-size: 2rem;
+		}
 	}
 }
 
@@ -208,14 +268,18 @@ body {
 		font-size: 13.6rem;
 		color: $accent;
 		text-transform: uppercase;
-		transition: rotate(180deg);
-		left: -25%;
-		top: 20%;
-		writing-mode: vertical-lr;
+		transform: rotate(-90deg);
+		left: -35%;
+		top: 30%;
 		z-index: 0;
 	}
 	.row{
 		align-items: flex-end;
+	}
+	@include lg{
+		&:before{
+			display: none;
+		}
 	}
 }
 .first_column_story{
@@ -243,60 +307,30 @@ body {
 .second_column_story{
 	position: relative;
 	top: 4rem;///??????
-.girl_img{
+	.girl_img{
 	height: 40rem;
 	width: 100%;
 	background: url(../img/dog_girl.jpg) no-repeat center center;
 	background-size: cover;
 	top: -130%;
 	position: absolute;
-	box-shadow: 0 8px 14px rgba(6,6,6,0.2)
+	box-shadow: 0 8px 14px rgba(6,6,6,0.2);
+	@include rwd(1600){
+		height: 35rem;
+		top: -120%;
+	}
+	@include xl{
+		height: 30rem;
+		top: -95%;
+	}
+	@include lg{
+		top: -90%;///не работает
+	}
+	@include md{
+		top: -50%;
+	}
 	}
 }
-// .col_img{
-// 	img{
-// 		display:block;
-// width:100%;
-// max-width:100%;
-// height:auto;
-// 	}
-// }
-// .second_column{
-// 	position: relative;
-// .col_img{
-// 	height: 40rem;
-// 	width: 100%;
-//
-// 	position: absolute;
-// 	top: -150%;
-// 	overflow: hidden;
-//
-// 	img{
-// 		object-fit: cover;//не работает почемуто
-// 	}
-// }
-//
-// }
-
-// .second_column{
-// 	position: relative;
-// 	&:before{
-// 		content: url(../img/dog_girl.jpg) ;
-// 		position: absolute;
-// 		height: 40rem;
-// 		top: -130%;
-// 		background-clip: padding-box;
-// 	}
-//
-// }
-// .col_img{
-// 	height: 40rem;
-// 	width: auto;
-// 	position: relative;
-// 	img{
-// 		position: absolute;
-// 	}
-// }
 
 
 	.dark_h{
@@ -339,7 +373,7 @@ body {
 			width: 100%;
 			height: 100%;
 			background-color: $extra-backcolor;
-			opacity: 0.7;
+			opacity: 0.8;
 		}
 	}
 	.our_puppies{
@@ -368,8 +402,9 @@ body {
 	font: 1.8rem "roboto-light";
 	position: relative;
 	li{
-		padding: 3.6rem 0;
-		padding-left: 14%;
+		padding: 3rem 0;
+		padding-left: 20%;
+		position: relative;
 		&:before{
 			content: '';
 			position: absolute;
@@ -377,7 +412,8 @@ body {
 			height: 3rem;
 			background-color: #fff;
 			border-radius: 3rem;
-			left: 0;
+			left: 7%;
+			top: 2.8rem;///??????
 		}
 	}
 }
@@ -390,8 +426,25 @@ body {
 	margin: 4.4rem 0 0;
 	position: relative;
 	overflow: hidden;
-	&:hover{
-		color: $accent;/////?????????????
+	&:hover .overlay {
+		background-color: rgba(114, 107, 177, 0.5);
+		opacity: 1;
+	}
+	.overlay{
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+		color: $text-white;
+		font-size: 3rem;
+		text-align: center;
+		opacity: 0;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		padding: 0 3%;
+		transition: all 0.5s ease;
 	}
 	img{
 		position: absolute;
@@ -400,13 +453,14 @@ body {
 		margin: 0 auto;
 		left: 50%;
 		top: 50%;
-		transform: translate(-50%,-50%)
+		transform: translate(-50%,-50%);
+	}
+	@include rwd(1600){
+		height: 45rem;
 	}
 }
-.img_dogs{
-	width: 100%;
-	
-}
+
+
 
 .second_column_dog{
 	position: relative;
@@ -414,43 +468,15 @@ body {
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
+	.imgs_dogs{
+		width: 100%;
+	}
 	.more_inf{
 		right: 3.2rem;
 		bottom: 0.5rem;
 	}
 }
-// .first_column_dog{
-// 	.dog1{
-// 	position: relative;
-// 	overflow: hidden;
-// 	img{
-// 		position: absolute;
-// 	}
-// 	}
-// 	.dog2{
-//
-// 	}
-// }
 
-
-// .first_column_dog{
-// 	position: relative;
-
-// 	img{
-// 		overflow: hidden;
-// 		object-fit: cover;
-//
-// 	}
-	// .img_dog{
-	// 	width: 100%;
-	// 	height: 560px;
-	// 	display: block;
-	// 	position: absolute;
-	// 	img{
-	// 		overflow: hidden;
-	// 	}
-	// 	}
-	// }
 
 .reviews{
 	background-color: $extra-backcolor;
@@ -476,7 +502,6 @@ body {
 			background-size: contain;
 			display: block;
     	margin: 0 auto;
-
 		}
 	}
 	h5{
@@ -491,7 +516,6 @@ body {
 		font-size: 1.8rem;
 		padding-top: 2.4rem;
 	}
-
 }
 .arrow{
 	padding: 0 6.8rem;
@@ -512,22 +536,137 @@ body {
 	img{
 		position: absolute;
 		width: auto;
-		height: 100%;///?????
+		height: 100%;
+		margin: 0 auto;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
 	}
 }
 .blog{
-	padding: 12.6rem 0;
+	padding: 5.4rem 0;
 	.blog_head{
 		text-align: center;
-		width: 55%;
+		width: 50%;
 		margin: 0 auto;
+		padding: 6rem 0;
+	}
+	h6{
+		padding: 1.4rem 0;
+		font-size: 1.6rem;
+	}
+	.blog_img{
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 238px;
+		img{
+			position: absolute;
+			width: auto;
+			height: 100%;
+			margin: 0 auto;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+	.blog_footer{
+		border-top: 1px solid #ccc;
+		padding: 1.2rem 0;
+		display: flex;
+		justify-content: space-between;
+		white-space: nowrap;
+		// width: 80%;
+		p{
+			font-size: 1.4rem;
+			padding-right: 1.4rem;
+		}
+		a{
+			font-size: 1.4rem;
+			color: $accent;
+			// padding-right: 10%;///???
+		}
+	}
+}
+.form_back{
+	padding: 5.4rem 0;
+	text-align: center;
+	.form_head{
+		// text-align: center;
+		width: 50%;
+		margin: 0 auto;
+		padding: 6rem 0;
+		h5{
+			font-size: 4.2rem;
+		}
+	}
+}
+.form_questions{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 40%;
+		justify-content: center;
+		margin: 0 auto;
+		// text-align: center;
+		.field{
+			width: 100%;
+			display: flex;
+			margin-bottom: 2.8rem;
+			font-family: $text-font;
+			font-size: 1.8rem;
+			box-shadow: 0 0 18px 2px rgba(6,6,6,0.1);
+
+			// flex-grow: 1;
+			input{
+				width: 100%;
+				height: 5rem;
+				border: 0;
+				padding-left: 2.2rem;
+			}
+			textarea{
+				width: 100%;
+				height: 16rem;
+				border: 0;
+				padding-left: 2.2rem;
+				padding-top: 2.2rem;
+				resize: none;
+			}
+	}
+}
+.send{
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	button{
+		background-color: $accent;
+		border: 0;
+		height: 6.2rem;
+		width: 19.6rem;
+		color: $text-white;
+		cursor: pointer;
+		transition: 0.3s;
+		&:hover{
+			background-color: $extra-accent;
+		}
+	}
+}
+.dark-overlay{
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(36,20,42,0.4);
 	}
 }
 
 
-
 	.footer_background{
-		height: 526px;
 		background: url(../img/dog_child.jpg) no-repeat 0 100%;
 		background-size: cover;
 		background-position: top;
@@ -535,15 +674,55 @@ body {
 
 
 	.foot_content{
-		padding: 10rem 0 0;
+		padding: 10rem 0 ;
+		h2,p{
+			color: $text-white;
+			margin-bottom: 0;
+			padding-bottom: 2rem;
+		}
+		.social-icons{
+			padding: 4rem 0;
+			.fa-instagram{
+				color: #ff7fd6;
+			}
+			.fa-facebook-f{
+				color: #3b5998;
+			}
+			.fa-twitter{
+				color: #1da1f2;
+			}
+			.fa-google-plus-g{
+				color: #dd4b39;
+			}
+			a{
+				padding: 0 1.8rem 0 0;
+			}
+		}
+		.copyright{
+			color: $extra-accent;
+		}
 		.address{
 			padding: 10rem 0;
 			font: "montserrat-bold", 1.8rem;
 			text-align: right;
+			color: $text-white;
+			position: relative;
+			&:before{
+				content: '';
+				position: absolute;
+				border: 16px solid rgba(114, 107, 177, 0.4);
+				z-index: 0;
+				height: 23rem;
+				width: 90%;
+				left: 20%;
+				top: 15%;
+
+			}
 		}
 	}
 
 
 
 
-@import "media"; // Always at the end
+
+// Always at the end
