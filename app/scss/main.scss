@@ -91,12 +91,18 @@ body {
 		opacity: 0.12;
 		left: 52%;
 		z-index: -1;
+		@include lg{
+			display: none;
+		}
 	}
 		@include rwd(1600) {
-			max-width: 1400px;
+			max-width: 1500px;
+		}
+		@include xl {
+			max-width: 1100px;
 		}
 		@include lg {
-			max-width: 1100px;
+			max-width: 990px;
 		}
 		@include md {
 			max-width: 760px;
@@ -106,22 +112,28 @@ body {
 .container_small{
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0 4rem;
 		position: relative;
 		display: flex;
 		@include rwd(1600){
 			max-width: 1000px;
 		}
 		@include xl{
-			max-width: 960px;
+			max-width: 990px;
 		}
 		@include lg{
-			max-width: 900px;
+			max-width: 770px;
 		}
 		@include md{
-			max-width: 760px;
+			max-width: 570px;
 		}
 	}
-
+.logo_menu_align{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+}
 .header_menu{
 	padding: 5.4rem 2rem;
 	display: flex;
@@ -131,7 +143,7 @@ body {
 			max-width: 100%;
 			height: auto;
 				@include md {
-					max-width: 10%
+					min-width: 10%
 				}
 			}
 		}
@@ -140,8 +152,50 @@ body {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	text-align: right;
+
+	@include xl{
+		font-size: 1.4rem;
+	}
 	@include lg{
-		font-size: 1.6rem;
+		// font-size: 1.4rem;
+	}
+	@include md{
+		font-size: 1.2rem;
+		nav{
+			display: none;
+		}
+		.contacts{
+			display: none;
+		}
+	}
+}
+.menu_button{
+	display: none;
+	width: 32px;
+	height: 20px;
+	background-image: linear-gradient(to left, $text-white, $text-white);
+	background-size: 100% 4px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	position:relative;
+	cursor: pointer;
+	transition: 0.3s;
+	&:before,
+	&:after{
+		content:"";
+		position: absolute;
+		border-bottom:4px solid $text-white;
+		width: 100%;
+		height: 4px;
+		left: 0;
+		top: 80%;
+		transition: 0.3s;
+	}
+	&:before{
+		top: 0;
+	}
+	@include md{
+		display: block;
 	}
 }
 .flex_menu{
@@ -229,6 +283,7 @@ body {
 		&:before{
 			width: 40rem;
 			height: 40rem;
+			left: -15%;
 		}
 		h1{
 			font-size: 6rem;
@@ -272,14 +327,19 @@ body {
 		left: -35%;
 		top: 30%;
 		z-index: 0;
+		// box-shadow: 0 8px 14px rgba(6,6,6,0.2); Тень от текста?????
 	}
 	.row{
 		align-items: flex-end;
 	}
 	@include lg{
+		padding: 10rem 0 10rem;
 		&:before{
 			display: none;
 		}
+	}
+	@include md{
+		padding: 8rem 0 8rem;
 	}
 }
 .first_column_story{
@@ -299,9 +359,18 @@ body {
 		color: $extra-backcolor;
 		text-transform: uppercase;
 		right: 50%;
-		top:-80%;
+		top:-100%;
 		transform: rotate(180deg);
 		z-index: -1;
+		@include xl{
+			top:-90%;
+		}
+		@include lg{
+			top: -80%;
+		}
+		@include md{
+			display: none;
+		}
 	}
 }
 .second_column_story{
@@ -321,13 +390,15 @@ body {
 	}
 	@include xl{
 		height: 30rem;
-		top: -95%;
+		top: -110%;
 	}
 	@include lg{
-		top: -90%;///не работает
+		height: 25rem;
+		top: -65%;
 	}
 	@include md{
-		top: -50%;
+		// height: 40rem;
+		display: none;
 	}
 	}
 }
@@ -339,6 +410,13 @@ body {
 		text-transform: uppercase;
 		line-height: 1.1;
 		padding-bottom: 4.8rem;
+		@include lg{
+			font-size: 6rem;
+		}
+		@include md{
+			font-size: 4rem;
+		}
+
 	}
 
 	.violet_h{
@@ -347,22 +425,7 @@ body {
 		color: $accent;
 		padding-bottom: 2.8rem;
 	}
-	// .photo_background{
-	// 	height: 526px;
-	// 	position: relative;
-	// 	&:before {
-	// 		content: '';
-	// 		background: url(../img/dog_child.jpg) no-repeat 0 100%;
-	// 		background-size: cover;
-	// 		background-position:top;
-	// 		position: absolute;
-	// 		left: 0;
-	// 		top: 0;
-	// 		width: 100%;
-	// 		height: 100%;
-	// 		z-index: -2;
-	// 	}
-	// }
+
 	.light-overlay{
 		position: relative;
 		&:before{
@@ -377,13 +440,19 @@ body {
 		}
 	}
 	.our_puppies{
-		height: 672px;
+		// height: 672px;
 		background: url(../img/puppi.jpg) no-repeat 0 100%;
 		background-size: cover;
 		background-position: top;
 	}
 	.puppies_content{
-		padding: 12rem 0 0;
+		padding: 12rem 0 8rem;
+		@include lg{
+			padding: 10rem 0 6rem;
+		}
+		@include md{
+			padding: 8rem 0 4rem;
+		}
 	}
 .first_column_puppi{
 	position: relative;
@@ -396,6 +465,17 @@ body {
 		position: absolute;
 		box-shadow: 0 8px 14px rgba(6,6,6,0.2);
 		z-index: 1;
+		@include xl{
+			top: 110%;
+			height: 30rem;
+		}
+		@include lg{
+			top: 120%;
+			height: 25rem;
+		}
+		@include md{
+			display:none;
+		}
 		}
 	}
 .second_column_puppi{
@@ -418,7 +498,13 @@ body {
 	}
 }
 .our_dogs{
-	padding: 19rem 0 9rem;
+	padding: 16rem 0 9rem;
+	@include lg{
+		padding: 14rem 0 9rem;
+	}
+	@include md{
+		padding: 8rem 0 9rem;
+	}
 }
 .img_dog{
 	height: 55.6rem;////????
@@ -426,6 +512,9 @@ body {
 	margin: 4.4rem 0 0;
 	position: relative;
 	overflow: hidden;
+	@include md{
+		height: 100rem;
+	}
 	&:hover .overlay {
 		background-color: rgba(114, 107, 177, 0.5);
 		opacity: 1;
@@ -458,6 +547,9 @@ body {
 	@include rwd(1600){
 		height: 45rem;
 	}
+	@include lg{
+		height: 40rem;
+	}
 }
 
 
@@ -470,10 +562,15 @@ body {
 	justify-content: space-between;
 	.imgs_dogs{
 		width: 100%;
+
 	}
 	.more_inf{
 		right: 3.2rem;
 		bottom: 0.5rem;
+		@include md{
+			bottom: 0;
+			padding-top: 6rem;
+		}
 	}
 }
 
@@ -507,6 +604,7 @@ body {
 	h5{
 		font-size: 3.6rem;
 		padding: 4rem 0;
+
 	}
 	p{
 		font-size: 2.1rem;
