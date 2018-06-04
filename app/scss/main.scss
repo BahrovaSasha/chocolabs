@@ -37,25 +37,12 @@ body {
 	main{
 		a{
 			color: $text-dark;
-
 		}
 	}
-
 }
-//
-// .img-responsive {
-// 	display: block;
-// 	max-width: 100%;
-// 	height: auto;
-// 	&.img-width {
-// 		width: 100%;
-// 	}
-// }
-
-
 .main_header{
 	background: rgba(36,20,42,0.4);
-	min-height: 700px;
+	min-height: 850px;
 	height: 100vh;
 	position: relative;
 	color: $text-white;
@@ -73,28 +60,12 @@ body {
 	}
 	a{
 		color: $text-white;
-
 	}
 }
-
-
 .container_big{
 	max-width: 1600px;
 	margin: 0 auto;
 	padding: 5.4rem 0 1.6rem;
-	&:before{
-		content: 'choс';
-		position: absolute;
-		font-size: 50rem;
-		color: $text-dark;
-		text-transform: uppercase;
-		opacity: 0.12;
-		left: 52%;
-		z-index: -1;
-		@include lg{
-			display: none;
-		}
-	}
 		@include rwd(1600) {
 			max-width: 1500px;
 		}
@@ -108,11 +79,26 @@ body {
 			max-width: 760px;
 		}
 	}
+	.back_phrase{
+		&:before{
+			content: 'choс';
+			position: absolute;
+			font-size: 50rem;
+			color: $text-dark;
+			text-transform: uppercase;
+			opacity: 0.12;
+			left: 52%;
+			z-index: -1;
+			@include lg{
+				display: none;
+			}
+		}
+	}
 
 .container_small{
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 0 4rem;
+		// padding: 0 4rem;
 		position: relative;
 		display: flex;
 		@include rwd(1600){
@@ -127,6 +113,12 @@ body {
 		@include md{
 			max-width: 570px;
 		}
+		@include sm{
+			max-width: 350px;
+		}
+		@include xs{
+			max-width: 300px;
+		}
 	}
 .logo_menu_align{
 	display: flex;
@@ -138,12 +130,19 @@ body {
 	padding: 5.4rem 2rem;
 	display: flex;
 	justify-content: space-between;
+	// position: fixed;
 	.logo {
 		img{
 			max-width: 100%;
 			height: auto;
 				@include md {
-					min-width: 10%
+					max-width: 50%
+				}
+				@include sm {
+					max-width: 60%;
+				}
+				@include xs{
+					max-width: 70%;
 				}
 			}
 		}
@@ -152,7 +151,13 @@ body {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	text-align: right;
-
+	// position: relative;
+	// .flex_menu{
+	// 	display: flex;
+	// 	justify-content: flex-end;
+	// 	position: absolute;
+	// }
+	// position: fixed;
 	@include xl{
 		font-size: 1.4rem;
 	}
@@ -161,8 +166,14 @@ body {
 	}
 	@include md{
 		font-size: 1.2rem;
-		nav{
+		.ul{
 			display: none;
+			// background: rgba(36,20,42,0.4);
+			// position: absolute;
+			// z-index: 10;
+			// width: 100%;
+			// left:0;
+			// top: 100%;
 		}
 		.contacts{
 			display: none;
@@ -196,12 +207,14 @@ body {
 	}
 	@include md{
 		display: block;
+		min-width: 32px;
 	}
 }
 .flex_menu{
 	display: flex;
 	justify-content: flex-end;
 	white-space: nowrap;//??????
+	// position: fixed;
 	li{
 		padding-left: 6.8rem;
 	}
@@ -214,9 +227,6 @@ body {
 .contacts{
 	display: inline-flex;
 	justify-content: flex-end;
-}
-.phone{
-
 }
 .social-icons{
 	padding-left: 4rem;
@@ -262,6 +272,9 @@ body {
 		padding-bottom: 8rem;
 		position: relative;
 		text-transform: uppercase;
+		@include sm{
+			padding-bottom: 4rem;
+		}
 	}
 	@include rwd(1600){
 		top: 4rem;
@@ -292,7 +305,23 @@ body {
 			font-size: 2rem;
 		}
 	}
-}
+	@include sm{
+		left: 5%;
+
+		&:before{
+			width: 35rem;
+			height: 35rem;
+			left: -20%;
+		}
+		h1{
+			font-size: 4rem;
+		}
+		h3{
+			font-size: 2rem;
+		}
+	}
+	}
+
 
 .more_inf{
 	font-size: 1.8rem;
@@ -324,7 +353,7 @@ body {
 		color: $accent;
 		text-transform: uppercase;
 		transform: rotate(-90deg);
-		left: -35%;
+		right: 75%;
 		top: 30%;
 		z-index: 0;
 		// box-shadow: 0 8px 14px rgba(6,6,6,0.2); Тень от текста?????
@@ -332,14 +361,27 @@ body {
 	.row{
 		align-items: flex-end;
 	}
-	@include lg{
-		padding: 10rem 0 10rem;
+	@include rwd(1600){
+		&:before{
+			right:72%;
+		}
+	}
+	@include xl{
 		&:before{
 			display: none;
 		}
 	}
+	@include lg{
+		padding: 10rem 0 10rem;
+		// &:before{
+		// 	display: none;
+		// }
+	}
 	@include md{
 		padding: 8rem 0 8rem;
+		// &:before{
+		// 	display: none;
+		// }
 	}
 }
 .first_column_story{
@@ -348,6 +390,9 @@ body {
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
+	h2{
+		width: 100%;
+	}
 	.more_inf{
 		right: 3.2rem;
 		bottom: 0.5rem;
@@ -381,7 +426,7 @@ body {
 	width: 100%;
 	background: url(../img/dog_girl.jpg) no-repeat center center;
 	background-size: cover;
-	top: -130%;
+	top: -140%;
 	position: absolute;
 	box-shadow: 0 8px 14px rgba(6,6,6,0.2);
 	@include rwd(1600){
@@ -390,7 +435,7 @@ body {
 	}
 	@include xl{
 		height: 30rem;
-		top: -110%;
+		top: -90%;
 	}
 	@include lg{
 		height: 25rem;
@@ -512,9 +557,12 @@ body {
 	margin: 4.4rem 0 0;
 	position: relative;
 	overflow: hidden;
-	@include md{
-		height: 100rem;
-	}
+	// @include lg{
+	// 	height: 40rem;
+	// }
+	// @include md{
+	// 	height: 20rem;
+	// }
 	&:hover .overlay {
 		background-color: rgba(114, 107, 177, 0.5);
 		opacity: 1;
@@ -548,7 +596,7 @@ body {
 		height: 45rem;
 	}
 	@include lg{
-		height: 40rem;
+		height: 35rem;
 	}
 }
 
@@ -609,6 +657,9 @@ body {
 	p{
 		font-size: 2.1rem;
 		font-style: italic;
+		@include md{
+			font-size: 1.6rem;
+		}
 	}
 	h6{
 		font-size: 1.8rem;
@@ -648,16 +699,35 @@ body {
 		width: 50%;
 		margin: 0 auto;
 		padding: 6rem 0;
+		@include sm{
+			width: 90%;
+		}
 	}
 	h6{
 		padding: 1.4rem 0;
 		font-size: 1.6rem;
+		@include lg{
+			font-size: 1.4rem;
+		}
 	}
 	.blog_img{
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		height: 238px;
+		height: 30rem;
+		@include xl{
+			height: 23rem;
+		}
+		@include lg{
+			height: 18rem;
+		}
+		@include md{
+			height: 40rem;
+		}
+		@include sm{
+			height: 25rem
+		}
+
 		img{
 			position: absolute;
 			width: auto;
@@ -685,6 +755,20 @@ body {
 			// padding-right: 10%;///???
 		}
 	}
+	@include lg{
+		padding: 2rem 0;
+	}
+	@include md{
+		.blog_content{
+			width: 60%;
+		}
+	}
+	@include md{
+		.blog_content{
+			width: 100%;
+		}
+	}
+
 }
 .form_back{
 	padding: 5.4rem 0;
@@ -696,6 +780,22 @@ body {
 		padding: 6rem 0;
 		h5{
 			font-size: 4.2rem;
+		}
+	}
+	@include lg{
+		padding: 2rem 0 5.4rem;
+		.form_head{
+			width: 100%;
+			h5{
+				white-space: nowrap;
+			}
+		}
+	}
+	@include sm{
+		.form_head{
+			h5{
+				font-size: 3rem;
+			}
 		}
 	}
 }
@@ -731,6 +831,12 @@ body {
 				padding-top: 2.2rem;
 				resize: none;
 			}
+	}
+	@include lg{
+		width: 60%;
+	}
+	@include sm{
+		width: 75%;
 	}
 }
 .send{
@@ -805,6 +911,15 @@ body {
 			text-align: right;
 			color: $text-white;
 			position: relative;
+			@include lg{
+				// right: 5%;
+				padding-right: 5rem;
+				padding-bottom: 5rem;
+			}
+			@include xs{
+				padding-right: 3rem;
+			}
+
 			&:before{
 				content: '';
 				position: absolute;
@@ -814,8 +929,18 @@ body {
 				width: 90%;
 				left: 20%;
 				top: 15%;
-
+				@include lg{
+					left: 10%;
+				}
+				@include md{
+					width: 100%;
+					left: 0;
+				}
 			}
+		}
+		@include lg{
+			padding: 4rem 0;
+
 		}
 	}
 
