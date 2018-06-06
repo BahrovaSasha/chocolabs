@@ -10,11 +10,11 @@ $(function() {
           appendArrows: '.reviews'
         });
         //open menu
-        // $(".header_menu").on("click", ".menu_button", function (){
-        // $(".flex_menu").slideToggle();
-        // $(".menu_button").toggleClass("close");
-        // });
+        $(".burger").on("click", function (){
+          $(".header_menu_wrap").toggleClass('active_nav');
+
       });
 	// Custom JS
 
+});
 });
