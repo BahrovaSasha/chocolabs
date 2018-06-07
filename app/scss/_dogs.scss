@@ -1,17 +1,28 @@
 .main_header_dogs{
-  height: 600px;
   min-height: 600px;
+  height: 600px;
   &:before{
     background: url(../img/dog5.jpg) no-repeat 0 100%;
-    background-position: center;
+    background-position: 50% 30%;
     background-size: cover;
+    // background-position: top;
+    @include rwd(1400){
+      background-position: center;
+    }
   }
   .header_description_dogs{
     width: 60rem;
-    // top: 20rem;
+    top: 4rem;
     &:before{
       width: 90%;
   		height: 35rem;
+      @include md{
+        height: 30rem;
+      }
+      @include sm{
+        left: -10%;
+        height: 26rem;
+      }
     }
     p{
       font-family: $default-font;
@@ -20,11 +31,40 @@
       text-transform: uppercase;
       padding-bottom: 0;
       position: relative;
+      @include md{
+        font-size: 2.2rem;
+      }
+      @include sm{
+        font-size: 2rem;
+      }
     }
     .violet_h{
   		font-size: 8rem;
       padding-bottom: 0;
+      @include md{
+        font-size: 6rem;
+      }
+      @include sm{
+        font-size: 4.5rem;
+      }
     }
+    @include rwd(1600){
+      top: 6rem;
+    }
+    @include md{
+      width: 40rem;
+      top: 3.5rem;
+    }
+    @include sm{
+      width: 34rem;
+    }
+    @include xs{
+      width: 30rem;
+    }
+  }
+  @include md{
+    height: 450px;
+    min-height: 450px;
   }
 }
 // .all_dogs{
@@ -33,19 +73,22 @@
 
   // position: relative;
   padding-bottom: 10rem;
-  height: 380px;
+  min-height: 380px;
   .pic_top{
     margin-top: -6%;
+    @include md{
+      margin-top: 0;
+    }
   }
   .one_dog{
     width: 100%;
     position: relative;
   	overflow: hidden;
     padding: 0 0.8rem;
-    top: 0;
+    // top: 0;
     min-height: 280px;//// на медиазапрос
     box-shadow: 0 8px 14px rgba(6,6,6,0.2);
-
+    // padding-bottom: 2rem;
     &:hover .overlay {
   		background-color: rgba(114, 107, 177, 0.5);
   		opacity: 1;
@@ -63,6 +106,7 @@
   		overflow: hidden;
   		display: flex;
   		align-items: center;
+      justify-content: center;
   		padding: 0 3%;
   		transition: all 0.5s ease;
       span{
@@ -83,11 +127,23 @@
   		top: 50%;
   		transform: translate(-50%,-50%);
   	}
+    @include lg{
+      min-height: 200px;
+    }
+    @include md{
+      min-height: 400px;
+    }
+    @include sm{
+      min-height: 300px;
+    }
   }
   h5{
     font-size: 2rem;
     text-transform: uppercase;
     padding: 2.4rem 0;
+  }
+  @include md{
+    padding-top: 4rem;
   }
 }
 // }
