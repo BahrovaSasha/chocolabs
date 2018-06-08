@@ -10,9 +10,12 @@
       background-position: center;
     }
   }
+
   .header_description_dogs{
     width: 60rem;
-    top: 4rem;
+    // top: 8rem;/////////////////////////////////////////////////////////////////
+
+
     &:before{
       width: 90%;
   		height: 35rem;
@@ -31,6 +34,7 @@
       text-transform: uppercase;
       padding-bottom: 0;
       position: relative;
+      opacity: 0.6;
       @include md{
         font-size: 2.2rem;
       }
@@ -39,8 +43,11 @@
       }
     }
     .violet_h{
-  		font-size: 8rem;
+  		font-size: 7rem;
       padding-bottom: 0;
+      white-space: nowrap;
+      color: $extra-accent;
+      position: relative;
       @include md{
         font-size: 6rem;
       }
@@ -49,11 +56,11 @@
       }
     }
     @include rwd(1600){
-      top: 6rem;
+      // top: 6rem;
     }
     @include md{
       width: 40rem;
-      top: 3.5rem;
+      // top: 16rem;
     }
     @include sm{
       width: 34rem;
@@ -62,11 +69,25 @@
       width: 30rem;
     }
   }
+
+
+  .details{
+    &:before{
+      top: -10rem;
+    }
+  }
   @include md{
     height: 450px;
     min-height: 450px;
   }
 }
+// .main_header_dogs.fixed_header{
+//   .header_description_dogs{
+//
+//       top:18.8rem;////////////////////////////////////////////////////////
+//
+//   }
+// }
 // .all_dogs{
 // height: 382px;
 .main_dogs{
