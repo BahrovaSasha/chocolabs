@@ -68,6 +68,11 @@ body {
 	// 	}
 	// }
 }
+.main_header.active_nav{
+	.header_description{
+		// z-index: -10000rem;//ошибка
+	}
+}
 .container_big{
 	max-width: 1600px;
 	margin: 0 auto;
@@ -137,9 +142,11 @@ body {
 	display: flex;
 	justify-content: space-between;
 	// height: 16rem;
-	align-items: center;
+	align-items: flex-start;
 	// position: fixed;
 	// top: 0;
+	z-index: 10;
+	height: 8rem;
 	.logo {
 		img{
 			max-width: 100%;
@@ -186,7 +193,7 @@ body {
 		.flex_menu{
 			background: rgba(36,20,42,0.4);
 			position: absolute;
-			z-index: 10;
+			// z-index: 10;
 			width: 100%;
 			left:0;
 			top: 100%;
@@ -198,6 +205,8 @@ body {
 // 	display: flex;
 // 	align-items: center;
 // 	justify-content: center;
+.burger{
+	height: 100%;
 
 .menu_button{
 	display: none;
@@ -208,7 +217,7 @@ body {
 	background-repeat: no-repeat;
 	background-position: 50%;
 	position:relative;
-	top: 50%;
+	top: 1rem;
 	cursor: pointer;
 	transition: 0.3s;
 	&:before,
@@ -230,7 +239,7 @@ body {
 		min-width: 32px;
 	}
 }
-
+}
 .flex_menu{
 	display: flex;
 	justify-content: flex-end;
@@ -266,7 +275,12 @@ body {
 			top: 0;
 		}
 	}
-	.header_menu_wrap{
+
+
+
+	// display: none;
+	.header_menu{
+		// padding:2rem;//?????????????????????????????
 		max-width: 100%;
 		background: rgba(33,0,42,0.4);
 		position: fixed;
@@ -274,7 +288,7 @@ body {
 		height: 10.8rem;
 		// overflow: auto;
 		// padding: 2rem 2rem;
-		z-index: 3;
+
 		// max-width: 100%;
 		// padding: 2rem;
 		// &:hover{
@@ -286,13 +300,6 @@ body {
 		@include md{
 			height: 8rem;
 		}
-	}
-
-
-	// display: none;
-	.header_menu{
-		padding:2rem;
-
 		// .details{
 		// 	font-size: 1.6rem;
 		// }
@@ -306,13 +313,31 @@ body {
 			}
 		}
 	}
+	// .flex_menu.active_nav{
+	// 	li{
+	// 		padding: 3rem 0;
+	// 	}
+	// }
+	.header_menu.active_nav{////отмена анимации и фона
+		background: none;
+		animation: none;
+		// .flex_menu{
+		// 	li{
+		// 		padding: 10rem;
+		// 	}
+		// }
+	}
 	.header_description{
 		top: 20.8rem;//////////////////////////////////////////////////////////////
+
 		@include md{
-			top: 18rem;
+			top: 10rem;
 		}
 	}
 }
+// .main_header.active_nav{
+// 	transition: none !important;////////////////////////////////////////////////////
+// }
 .header_menu_wrap{
 	height: 10.8rem;
 	@include md{
@@ -320,7 +345,7 @@ body {
 	}
 }
 .header_content{
-	// position: relative;
+	z-index: 0;
 	&:before{
 		content: 'choс';
 		position: absolute;
@@ -329,7 +354,7 @@ body {
 		text-transform: uppercase;
 		opacity: 0.12;
 		left: 52%;
-		z-index: -1;
+		z-index: -1;//????????????????????
 		top: -10.8rem;
 		// top: -50%;
 		// top: -50%; //// позиция
@@ -344,70 +369,129 @@ body {
 	// 	font-size: 1.6rem;
 	// }
 }
-.active_nav{//////////////////////////////x
-	height: 100%;
-	.main_header.fixed_header{
-		.header_menu_wrap{
-			// transition: 0.3s;
-			// background: rgba(33,0,42,0.8);
-
-		}
-	}
-	.menu_button{
-		background: none;
-		&:before{
-			transform: rotate(-45deg);
-			top: 50%;
-		}
-		&:after{
-			transform: rotate(45deg);
-			top: 50%;
-		}
-	}
-	.details{
-		padding-left: 0;
-		display: flex;
-		position: fixed;
-		// left:30%;
-
-		height:100%;
-		width: 100%;
-		text-align: center;
-		align-items: center;
-		flex-direction: column;
-		.main_nav{
-			// top:-40%;
-			justify-content: center;
-			.flex_menu{
-				background: none;
-				display: flex;
-				flex-direction: column;
-				position: fixed;
-				width: 100%;
-				height: 100%;
-				align-items: center;
-				justify-content: center;
-				// position: fixed;
-				// align-items: center;
-				// justify-content: center;
-				li{
-					padding: 1rem 0;
-					ul{
-						margin-bottom: 0;
-					}
-				}
+.logo_burger_wrap{
+	display: flex;
+	align-items: center;
+}
+.burger.active_nav{
+	// .menu_button{
+	// 	top: 1%;
+	// }
+	@include md{
+		.menu_button{
+			background: none;
+			&:before{
+				transform: rotate(-45deg);
+				top: 50%;
+			}
+			&:after{
+				transform: rotate(45deg);
+				top: 50%;
 			}
 		}
-		.contacts{
-			flex-direction: column;///не видно
-			top: -50%;
-		}
 	}
-	// .header_description{
-	// 	@include md{
-	// 		display: none;///НЕ РАБОТАЕТ????
-	// 	}
+}
+.header_menu.active_nav{//////////////////////////////////////////////////
+	background: none;
+	z-index: 10000;
+	height: 100vh;//////////////////////////////////////////////////////////////////////////////////
+	// @include md{
+	// 	height: 100vh;///не перебивает
+	// }
+
+	align-items: flex-start;
+	.logo_menu_align{
+		z-index: 10000;
 	}
+	.details{
+				padding-left: 0;
+				display: flex;
+				position: fixed;
+				// left:30%;
+				// background: rgba(33,0,42,0.4);
+				height:100%;
+				width: 100%;
+				text-align: center;
+				align-items: center;
+				flex-direction: column;
+				justify-content: center;
+				// z-index: 10000;
+				.main_nav{
+					// top:-40%;
+					// justify-content: center;
+					// text-align: center;
+					// z-index: 10000;
+					.flex_menu{
+						background: rgba(33,0,42,0.4);
+						display: flex;
+						flex-direction: column;
+						position: fixed;
+						width: 100%;
+						height: 100%;
+						align-items: center;
+						justify-content: center;
+						// position: fixed;
+						// align-items: center;
+						// justify-content: center;
+						// z-index: 1000;
+						overflow: auto;
+						top: 0;
+						ul{
+							margin-bottom: 0;
+						li{
+							padding: 1rem 0;
+							a{
+
+							}
+						}
+					}
+					}
+				}
+				.contacts{
+					flex-direction: column;///не видно
+					// top: -50%;
+					display: flex;
+					width: 100%;
+					height: 100%;
+					// align-items: center;
+					// justify-content: center;
+					z-index: 10000;
+					overflow: auto;
+					// top: 80%;
+				}
+
+
+
+	}
+}
+.header_menu.active_nav.fixed_header{
+	.contacts{
+		justify-content: flex-start;
+	}
+}
+// .header_menu_wrap.active_nav{
+// 	height: 100vh;
+// }
+// .main_header.active_nav.fixed_header{
+// 	.header_menu_wrap{
+// 	background: rgba(33,0,42,0);
+// }
+// }
+
+// .active_nav{//////////////////////////////x
+// 	height: 100%;
+// 	.main_header.fixed_header{
+// 		.header_menu_wrap{
+// 			// height: 100%;
+// 		}
+// 	}
+//
+//
+// 	// .header_description{
+// 	// 	@include md{
+// 	// 		display: none;///НЕ РАБОТАЕТ????
+// 	// 	}
+// 	}
 
 
 
@@ -420,6 +504,7 @@ body {
 	align-items: flex-start;
 	justify-content:center;
 	flex-direction: column;
+
 	// top: 20.8rem;
 	&:before{
 		content: '';
@@ -499,7 +584,7 @@ body {
 	font-size: 1.8rem;
 	position: relative;
 	span{
-		z-index: 1;
+		z-index: 0;
 		position: relative;
 	}
 	&:before{
@@ -971,6 +1056,10 @@ body {
 		}
 	}
 }
+
+
+
+
 .form_questions{
 		display: flex;
 		flex-direction: column;
@@ -1121,4 +1210,6 @@ body {
 
 
 // Always at the end
-@import "dogs"
+@import "dogs";
+@import "one_dog";
+@import "puppies"

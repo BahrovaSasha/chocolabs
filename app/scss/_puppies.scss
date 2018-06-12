@@ -1,0 +1,60 @@
+.main_puppies{
+  padding: 8rem 0;
+}
+.puppies_info{
+  text-align: center;
+  padding-bottom: 4rem;
+  width: 60%;
+  margin: 0 auto;
+  h2{
+    white-space: nowrap;
+  }
+  // max-width: 50%;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+}
+.puppi_wrap{
+  padding-bottom: 6rem;
+}
+.one_puppi{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0.8rem;
+  min-height: 280px;
+  box-shadow: 0 8px 14px rgba(6,6,6,0.2);
+  &:hover .overlay {
+    background-color: rgba(114, 107, 177, 0.5);
+    opacity: 1;
+  }
+  .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: $text-white;
+    font-size: 2.4rem;
+    text-align: center;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3%;
+    transition: all 0.5s ease;
+    span{
+      text-align: center;
+    }
+  }
+  img{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
