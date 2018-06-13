@@ -9,10 +9,30 @@
   h2{
     white-space: nowrap;
   }
+  &:before{
+    content: 'b';
+    position: absolute;
+    font-size: 84rem;
+    color: $extra-backcolor;
+    text-transform: uppercase;
+    right: 70%;
+    top:-25%;
+    transform: rotate(180deg);
+    z-index: -1;
+    @include md{
+      display: none;
+    }
+  }
   // max-width: 50%;
   // display: flex;
   // justify-content: center;
   // flex-direction: column;
+  @include lg{
+    width: 80%;
+  }
+  @include md{
+    width: 100%;
+  }
 }
 .puppi_wrap{
   padding-bottom: 2rem;
@@ -71,5 +91,11 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
+  }
+  @include lg{
+    min-height: 200px;
+  }
+  @include md{
+    min-height: 400px;
   }
 }

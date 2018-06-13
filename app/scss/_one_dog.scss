@@ -14,25 +14,48 @@
 
 .about_dog{
   padding: 8rem 0 0;
-  .big_dog_img{
-    height: 41rem;
-  	width: 100%;
-  	// margin: 0 0;
-  	position: relative;
-  	overflow: hidden;
-    box-shadow: 0 0 18px 2px rgba(6,6,6,0.1);
-    margin-top: 8rem;
-    @include md{
-      margin-top: 0;
+  .dogs_photos{
+    &:before{
+      content: 'b';
+  		position: absolute;
+  		font-size: 84rem;
+  		color: $extra-backcolor;
+  		text-transform: uppercase;
+  		right: 50%;
+  		top:-55%;
+  		transform: rotate(180deg);
+  		z-index: -1;
+      @include md{
+  			display: none;
+  		}
     }
-    img{
-      position: absolute;
-  		width: auto;
-  		height: 100%;
-  		margin: 0 auto;
-  		left: 50%;
-  		top: 50%;
-  		transform: translate(-50%,-50%);
+    .big_dog_img{
+      height: 40rem;
+    	width: 100%;
+    	// margin: 0 0;
+    	position: relative;
+    	overflow: hidden;
+      box-shadow: 0 0 18px 2px rgba(6,6,6,0.1);
+      margin-top: 8rem;
+      @include lg{
+        height: 30rem;
+      }
+      @include md{
+        margin-top: 0;
+      }
+      img{
+        position: absolute;
+    		width: auto;
+    		height: 100%;
+    		margin: 0 auto;
+    		left: 50%;
+    		top: 50%;
+    		transform: translate(-50%,-50%);
+        @include md{
+          width: 100%;
+      		height: auto;
+        }
+      }
     }
   }
   .small_carousel{
@@ -82,6 +105,9 @@
 }
 .one_dog_info{
   padding: 4rem 0;
+  @include md{
+    padding: 0;
+  }
 }
   @include md{
     padding: 6rem 0;
@@ -144,7 +170,7 @@
     transform: translate(-50%,-50%);
   }
   @include lg{
-    min-height: 200px;
+    min-height: 300px;
   }
   @include md{
     min-height: 400px;
