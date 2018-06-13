@@ -3,7 +3,7 @@
 }
 .puppies_info{
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   width: 60%;
   margin: 0 auto;
   h2{
@@ -15,7 +15,22 @@
   // flex-direction: column;
 }
 .puppi_wrap{
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
+  h6{
+    padding: 1.4rem 0;
+		font-size: 1.6rem;
+  }
+  .puppi_footer{
+    border-top: 1px solid #ccc;
+		padding: 1.2rem 0;
+		display: flex;
+		justify-content: space-between;
+		white-space: nowrap;
+  }
+  p{
+    padding-bottom: 0;
+    font-size: 1.4rem;
+  }
 }
 .one_puppi{
   width: 100%;

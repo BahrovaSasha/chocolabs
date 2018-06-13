@@ -17,6 +17,8 @@ $(function() {
           prevArrow: false,
           nextArrow: '<span class="arrow right_arrow"><i class="fas fa-chevron-right"></i></span>',
           appendArrows: '.small_carousel',
+          infinite: true,
+          adaptiveHeight: true,
           responsive: [
             {
               breakpoint: 1024,
