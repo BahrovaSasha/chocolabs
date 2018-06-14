@@ -37,12 +37,17 @@
     	overflow: hidden;
       box-shadow: 0 0 18px 2px rgba(6,6,6,0.1);
       margin-top: 8rem;
+      @include rwd(1600){
+        height: 35rem;
+      }
       @include lg{
-        height: 30rem;
+        height: 25rem;
+        margin-top: 12rem;
       }
       @include md{
         margin-top: 0;
       }
+
       img{
         position: absolute;
     		width: auto;
@@ -55,6 +60,10 @@
           width: 100%;
       		height: auto;
         }
+        @include sm{
+          width: auto;
+      		height: 100%;
+        }
       }
     }
   }
@@ -63,6 +72,7 @@
     display: flex;//не работает
     // align-items: flex-end;
     max-width: 100%;
+    // position: relative;
     .small_dog_img{
       display: block;
       height: 10rem;
@@ -72,7 +82,6 @@
       box-shadow: 0 0 18px 2px rgba(6,6,6,0.1);
       // margin: 0 10rem 0 0;
       margin: 0 5px;
-      padding: 0 5px;
       img{
         position: absolute;
     		width: auto;
@@ -83,20 +92,28 @@
     		top: 50%;
     		transform: translate(-50%,-50%);
       }
+      @include rwd(1600){
+        height: 8rem;
+      }
+      @include lg{
+        height: 7rem;
+      }
+      @include md{
+        height: 10rem;
+      }
     }
     .right_arrow{
-      position: absolute;
-      right: 0;
-      top: 0;
-      width:20%;
+      // position: absolute;
+      // right: 0;
+      // top: 0;
+      width: 10%;//??????????????????????????????????????????????????????????????
       display: flex;
       align-items: center;
       justify-content: center;
-    .arrow{
-      padding: 0 0;
-      // left: -10rem;
+      .arrow{
+        padding: 0 4rem;///не работант
+      }
     }
-  }
   }
 .dogs_info{
   @include md{
@@ -107,6 +124,18 @@
   padding: 4rem 0;
   @include md{
     padding: 0;
+  }
+  .dogs_info{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    .more_inf{
+      padding-top: 4rem;
+      right: 1.5rem;
+      bottom: 0.5rem;
+    }
   }
 }
   @include md{
