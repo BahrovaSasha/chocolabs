@@ -11,9 +11,25 @@
     background-size: cover;
   }
 }
-///////////////////////////////////////////////////////фото и карусель
-
-//////////////////////////////////////////////////////////карусель
+.dogs_info{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  // justify-content: space-between;
+  .more_inf{
+    padding-top: 4rem;
+    right: 1.5rem;
+    bottom: 0.5rem;
+  }
+  .dark_h{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+  }
+}
+.one_dog_info{
+  padding: 4rem 0;
 .one_dog{
   width: 100%;
   position: relative;
@@ -65,4 +81,18 @@
   @include sm{
     min-height: 300px;
   }
+}
+h5{
+  font-size: 2rem;
+  text-transform: uppercase;
+  padding: 2.4rem 0;
+}
+ul{
+  padding: 2rem 0;
+  li{
+    font-family: $text-font;
+    font-size: 1.8rem;
+    padding: 0.6rem 0;
+  }
+}
 }

@@ -1214,10 +1214,33 @@ body {
 			    margin: 0 auto;
 			    // left: -50%;
 			    // top: 50%;
+					@include md{
+						width: 100%;
+				    height: auto;
+					}
+					@include sm{
+						width: auto;
+				    height: 100%;
+					}
+				}
+				@include lg{
+					height: 35rem;
+				}
+
+				@include sm{
+					height: 25rem;
 				}
 			}
+			@include lg{
+				height: 35rem;
+			}
+			@include sm{
+				height: 25rem;
+			}
 		}
-
+		@include md{
+			top:0;
+		}
     // .big_dog_img{
     //   width: 40rem;
     //   margin-top: 8rem;
@@ -1349,40 +1372,19 @@ body {
     padding-top: 3rem;
   }
 }
-.one_dog_info{
-  padding: 4rem 0;
-  @include md{
-    padding: 0;
-  }
-  .dogs_info{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    .more_inf{
-      padding-top: 4rem;
-      right: 1.5rem;
-      bottom: 0.5rem;
-    }
-  }
-}
+
+
+
+	
+
+
   @include md{
     padding: 6rem 0;
   }
-  h5{
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 2.4rem 0;
-  }
-  ul{
-    padding: 2rem 0;
-    li{
-      font-family: $text-font;
-      font-size: 1.8rem;
-      padding: 0.6rem 0;
-    }
-  }
+
+	@include md{
+		padding: 0;
+	}
 }//////////////////////карусель маленькая
 
 	.footer_background{
