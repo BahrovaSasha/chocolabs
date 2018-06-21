@@ -1,95 +1,28 @@
-<!DOCTYPE html>
-<html lang="ru">
 
-<head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>Chocolabs</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-</head>
-
-<body>
-	<header class="main_header main_header_dog">
-		<div class="header_menu_wrap">
-			<div class="header_menu">
-				<div class="logo_menu_align">
-					<a href="#" class="logo"><img src="img\logo.png" alt="logo"></a>
-				</div>
-			<div class="details">
-			<nav class="main_nav">
-				<ul class="flex_menu">
-					<li><a href="#">Наши собаки</a></li>
-					<li><a href="#">Наши щенки</a></li>
-					<li><a href="#">Блог</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="contacts">
-				<div class="phone">
-					<a href="tel:+380953046410">+38(095) 304 64 10</a>
-				</div>
-				<div class="social-icons">
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-google-plus-g"></i></a>
-				</div>
-			</div>
-		</div>
-		<a href="#" class="burger">
-			<span class="menu_button"></span>
-		</a>
-		</div>
 		</div>
 		<span class="background_img_dog" style="background-image: url(../img/dog5.jpg);"></span>
 	</header>
-
 	<main class="container_small">
 		<div class="about_dog">
 			<div class="row one_dog_info">
 				<div class="dogs_photos col-md-6 col-xs-12 left_column">
-
 					<div class="one_photo_slider">
-
 							<div class="img_main_carousel">
 								<img src="img\dog1.jpg" alt="">
 							</div>
 							<div class="img_main_carousel">
 								<img src="img\dog2.jpg" alt="">
 							</div>
-
-
 							<div class="img_main_carousel">
 								<img src="img\dog7.jpg" alt="">
 							</div>
-
-
 							<div class="img_main_carousel">
 								<img src="img\dog8.jpg" alt="">
 							</div>
-
-
 							<div class="img_main_carousel">
 								<img src="img\dog6.jpg" alt="">
 							</div>
-
 					</div>
-
 					<div class="small_carousel">
 						<div class="img_dog_wrap">
 							<div class="img_dog_carousel">
@@ -118,10 +51,6 @@
 						</div>
 					</div>
 				</div>
-
-
-
-
 					<div class="col-md-6 col-xs-12 right_column">
 						<div class="dogs_info">
 							<h2 class="dark_h"><span>Holstep's backardy</span></h2>
@@ -131,8 +60,6 @@
 					</div>
 				</div>
 			</div>
-
-
 			<div class="row one_dog_info">
 				<div class="col-md-6 col-xs-12 left_column">
 					<h5>Кобель &mdash; Holstep’s Backardy</h5>
@@ -160,31 +87,3 @@
 				</div>
 			</div>
 	</main>
-
-	<footer class="footer_background dark-overlay">
-		<div class="row foot_content container_small">
-			<div class="col-md-6 col-xs-12">
-				<h2 class="violet_h">Chocolabs</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adip isici ng elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aend minim  amo veniam, quis nostrud exercitation</p>
-				<div class="social-icons">
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-google-plus-g"></i></a>
-				</div>
-					<div class="copyright">Все права защищены &copy; 2018</div>
-			</div>
-			<div class="col-md-6 col-xs-12 address">
-				<p>Украина, Харьков</p>
-				<p>ул.Героев Труда 10</p>
-				<p>+38(095) 304 64 10 Валентина</p>
-			</div>
-		</div>
-
-	</footer>
-
-
-	<script src="js/scripts.min.js"></script>
-
-</body>
-</html>

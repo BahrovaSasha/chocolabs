@@ -1,15 +1,15 @@
-.main_header_dog{
-  min-height: 10.8rem;
-  height: 10.8rem;
-  @include md{
-    min-height: 8rem;
-    height: 8rem;
-  }
-  .background_img_dog{
-    background-position: 0 25%;
-    background-size: cover;
-  }
-}
+// .main_header_dog{
+//   min-height: 10.8rem;
+//   height: 10.8rem;
+//   @include md{
+//     min-height: 8rem;
+//     height: 8rem;
+//   }
+//   .background_img_dog{
+//     background-position: 0 25%;
+//     background-size: cover;
+//   }
+// }
 .dogs_info{
   position: relative;
   display: flex;
@@ -27,7 +27,7 @@
     align-items: flex-start;
   }
 }
-.one_dog_info{
+.one_article_info{
   padding: 4rem 0;
 .one_dog{
   width: 100%;

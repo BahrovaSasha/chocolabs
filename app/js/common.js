@@ -10,14 +10,7 @@ $(function() {
           appendArrows: '.reviews'
         });
 
-        // $('.big-img-small_carousel').slick({
-        //  slidesToShow: 1,
-        //  slidesToScroll: 1,
-        //  arrows: false,
-        //  fade: true,
-        //  asNavFor: '.small_carousel',
-        //  adaptiveHeight: true
-        // });
+
         $('.one_photo_slider').slick({
          slidesToShow: 1,
          slidesToScroll: 1,
@@ -61,48 +54,7 @@ $(function() {
               },
             ]
         });
-        // $('.small_carousel').slick({
-        //   infinite: false, //бесконечное прокручивание не получается- растягивает на всю страницу
-        //   speed: 300,
-        //   slidesToShow: 4,
-        //   slidesToScroll: 1,
-        //   prevArrow: false,
-        //   nextArrow: '<span class="arrow right_arrow"><i class="fas fa-chevron-right"></i></span>',
-        //   appendArrows: '.small_carousel',
-        //   infinite: true,
-        //   adaptiveHeight: true,
-        //   asNavFor: '.big-img-small_carousel',
-        //   focusOnSelect: true,
-        //   responsive: [
-        //     {
-        //       breakpoint: 1024,
-        //       settings: {
-        //         slidesToShow: 3,
-        //         slidesToScroll: 3,
-        //         // infinite: false,
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 600,
-        //       settings: {
-        //         slidesToShow: 2,
-        //         slidesToScroll: 2,
-        //         // infinite: false,
-        //       }
-        //     },
-        //     {
-        //       breakpoint: 480,
-        //       settings: {
-        //         slidesToShow: 1,
-        //         slidesToScroll: 1,
-        //         // infinite: false,
-        //       }
-        //     }
-        //     // You can unslick at a given breakpoint now by adding:
-        //     // settings: "unslick"
-        //     // instead of a settings object
-        //   ]
-        // });
+
 
         //open menu
         $(".burger").on("click", function (){
@@ -123,6 +75,22 @@ $(function() {
         }
       });
 	// Custom JS
-
+  // var nav = $('.for_arrow');
+  //
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 1200) {
+  //     nav.append($('<span class="arrow" id="#scroll-top"><i class="fas fa-angle-up"></i></span>'));
+  //   } else if($(this).scrollTop() <= 1200 && nav.hasClass("fixed_arrow")) {
+  //     nav.remove($('<span class="arrow" id="#scroll-top"><i class="fas fa-angle-up"></i></span>'));
+  //   }
+  // });
 });
+
+  // $(document).on('click', 'a[href^="#scroll-top"]', function (event) {
+  //   event.preventDefault();
+  //
+  // $('html, body').animate({
+  //   scrollTop: $($.attr(this, 'href')).offset().top - 600
+  //   }, 500);
+  // });
 });

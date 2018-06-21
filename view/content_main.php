@@ -1,64 +1,3 @@
-<!DOCTYPE html>
-<html lang="ru">
-
-<head>
-
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
-
-	<title>Chocolabs</title>
-	<meta name="description" content="">
-
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
-
-	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
-	<!-- Custom Browsers Color End -->
-
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
-</head>
-
-<body>
-	<header class="main_header">
-
-		<div class="header_menu_wrap">
-			<div class="header_menu">
-				<div class="logo_menu_align">
-					<a href="#" class="logo">
-						<img src="img\logo.png" alt="logo">
-					</a>
-				</div>
-			<div class="details">
-
-			<nav class="main_nav">
-				<ul class="flex_menu">
-					<li><a href="#">Наши собаки</a></li>
-					<li><a href="#">Наши щенки</a></li>
-					<li><a href="#">Блог</a></li>
-					<li><a href="#">Контакты</a></li>
-				</ul>
-			</nav>
-			<div class="contacts">
-				<div class="phone">
-					<a href="tel:+380953046410">+38(095) 304 64 10</a>
-				</div>
-				<div class="social-icons">
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-facebook-f"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-google-plus-g"></i></a>
-				</div>
-			</div>
-		</div>
-		<a href="#" class="burger">
-			<span class="menu_button"></span>
-		</a>
-		</div>
 		</div>
 		<div class="header_content container_small">
 		<div class="header_description">
@@ -67,7 +6,7 @@
 			<a href="#" class="more_inf"><span>Узнать больше</span></a>
 		</div>
 		</div>
-		<span class="background_img_dog" style="background-image: url(../img/mainimg.jpg);"></span>
+		<span class="background_img_dog" style="background-image: url(<?php echo base_url(); ?>content/ui/img/mainimg.jpg);"></span>
 	</header>
 
 	<main>
@@ -82,7 +21,7 @@
 					</div>
 					<div class="col-md-6 col-xs-12 second_column_story right_column">
 						<div class="girl_img">
-							<!-- <img src="img\dog_girl.jpg" alt=""> -->
+							<!-- <img src="<?php echo base_url(); ?>content/ui/img/dog_girl.jpg" alt=""> -->
 						</div>
 						<p>Спустя какое-то время, у нас появился второй лабрадор, сын Бакардика, Кай (Kaytan Christmas Star) – он был нашим первым алиментным щенком, с которым мы не смогли расстаться и с тех пор начались наши выставки, натаски и безумное увлечение этой породой, что привело к появлению нашей третьей собаки, самой красивой – Барби (Holstep’s Healt Resort).</p>
 <p>Будьте внимательны, перед покупкой щенка лабрадора – любовь к ним может стать заразительной!</p>
@@ -118,22 +57,22 @@
 						<h2 class="dark_h">Наши собаки</h2>
 						<p>Мы любим наших собак и их здоровье для нас в приоритете. Наши собаки не больны наследственными заболеваниями свойственные породе.</p>
 						<div class="img_dog">
-							<img src="img\dog1.jpg" alt="">
+							<img src="<?php echo base_url(); ?>content/ui/img/dog1.jpg" alt="">
 							<div class="overlay">Наши собаки берут активное участие в выставках в Украине и ближнем зарубежье</div>
 						</div>
 						<div class="img_dog">
-							<img src="img\dog2.jpg" alt="">
+							<img src="<?php echo base_url(); ?>content/ui/img/dog2.jpg" alt="">
 							<div class="overlay">Наши собаки берут активное участие в выставках в Украине и ближнем зарубежье</div>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-12 second_column_dog right_column">
 						<div class = "imgs_dogs">
 						<div class="img_dog">
-							<img src="img\dog3.jpg" alt="">
+							<img src="<?php echo base_url(); ?>content/ui/img/dog3.jpg" alt="">
 							<div class="overlay">Наши собаки берут активное участие в выставках в Украине и ближнем зарубежье</div>
 						</div>
 						<div class="img_dog">
-							<img src="img\dog4.jpg" alt="">
+							<img src="<?php echo base_url(); ?>content/ui/img/dog4.jpg" alt="">
 							<div class="overlay">Наши собаки берут активное участие в выставках в Украине и ближнем зарубежье</div>
 						</div>
 						</div>
@@ -150,7 +89,7 @@
 			    		<p>Долго не могла определиться и все же выбрала прекрасную девочку. Здоровая, активная, с документами — что еще важно для заводчика. Очень благодарна Валентине за такого прелестного друга!</p>
 							<div class="person">
 								<div class="avatar">
-									<img src="img\avatar_girl.jpeg" alt="">
+									<img src="<?php echo base_url(); ?>content/ui/img/avatar_girl.jpeg" alt="">
 								</div>
 								<h6>Влада Филипова</h6>
 							</div>
@@ -160,7 +99,7 @@
 			    		<p>Долго не могла определиться и все же выбрала прекрасную девочку. Здоровая, активная, с документами — что еще важно для заводчика. Очень благодарна Валентине за такого прелестного друга!</p>
 							<div class="person">
 								<div class="avatar">
-									<img src="img\avatar_girl.jpeg" alt="">
+									<img src="<?php echo base_url(); ?>content/ui/img/avatar_girl.jpeg" alt="">
 								</div>
 								<h6>Влада Филипова</h6>
 							</div>
@@ -177,7 +116,7 @@
 						<div class="row container_small blog_content">
 							<div class="col-md-4 col-xs-12">
 								<div class="blog_img">
-									<img src="img\dog5.jpg" alt="">
+									<img src="<?php echo base_url(); ?>content/ui/img/dog5.jpg" alt="">
 								</div>
 								<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
 								<div class="blog_footer">
@@ -187,7 +126,7 @@
 							</div>
 							<div class="col-md-4 col-xs-12">
 								<div class="blog_img">
-									<img src="img\dog6.jpg" alt="">
+									<img src="<?php echo base_url(); ?>content/ui/img/dog6.jpg" alt="">
 								</div>
 								<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
 								<div class="blog_footer">
@@ -197,7 +136,7 @@
 							</div>
 							<div class="col-md-4 col-xs-12">
 								<div class="blog_img">
-									<img src="img\dog_child2.jpg" alt="">
+									<img src="<?php echo base_url(); ?>content/ui/img/dog_child2.jpg" alt="">
 								</div>
 								<h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
 								<div class="blog_footer">
@@ -215,51 +154,24 @@
 						</div>
 						<form class="form_questions">
 							<div class="field">
-								<input type="text" name="Your name" id="" placeholder="Ваше имя" required>
+								<input type="text" name="Your name" id="user-name" placeholder="Ваше имя" required>
 								<span class="error_message"></span>
 							</div>
 							<div class="field">
-								<input type="text" name="E-mail" id="" placeholder="E-mail" required>
+								<input type="text" name="E-mail" id="user-email" placeholder="E-mail" required>
 								<span class="error_message"></span>
 							</div>
 							<div class="field">
-								<input type="text" name="Subject" id="" placeholder="Тема" required>
+								<input type="text" name="Subject" id="user-subject" placeholder="Тема" required>
 								<span class="error_message"></span>
 							</div>
 							<div class="field">
-								<textarea name="messege" name="messege" id="" placeholder="Сообщение"></textarea>
+								<textarea name="messege" name="messege" id="user-message" placeholder="Сообщение"></textarea>
 							</div>
 							<div class="send">
-								<button type="submit" name="button">Отправить</button>
+								<button type="button" name="button">Отправить</button>
 							</div>
 						</form>
 
 					</div>
 	</main>
-
-	<footer class="footer_background dark-overlay">
-		<div class="row foot_content container_small">
-			<div class="col-md-6 col-xs-12">
-				<h2 class="violet_h">Chocolabs</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adip isici ng elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim aend minim  amo veniam, quis nostrud exercitation</p>
-				<div class="social-icons">
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-google-plus-g"></i></a>
-				</div>
-					<div class="copyright">Все права защищены &copy; 2018</div>
-			</div>
-			<div class="col-md-6 col-xs-12 address">
-				<p>Украина, Харьков</p>
-				<p>+38(095) 304 64 10 Валентина</p>
-			</div>
-		</div>
-
-	</footer>
-
-
-	<script src="js/scripts.min.js"></script>
-
-</body>
-</html>

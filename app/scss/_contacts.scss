@@ -1,0 +1,67 @@
+.connect{
+  padding: 8rem 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .social_icons{
+    padding: 2rem 0;
+
+    a{
+    color: $accent;
+    font-size: 2.4rem;
+    padding: 0 2rem;
+    }
+  }
+  .violet_h{
+
+    white-space: nowrap;
+    font-size: 4.2rem;
+    // padding: 2rem 0;
+    padding-top: 4rem;
+    padding-bottom: 0;
+  }
+  .phone{
+    border-top: 1px solid #ccc;
+    width: 50%;
+    font-size: 2.4rem;
+    color: $text-dark;
+    padding: 2rem 0;
+  }
+}
+
+.connect_info{
+  text-align: center;
+  // padding-bottom: 2rem;
+  width: 60%;
+  margin: 0 auto;
+  .dark_h{
+    font-size: 4.2rem;
+    padding-bottom: 2rem;
+  }
+  // &:before{
+  //   content: 'b';
+  //   position: absolute;
+  //   font-size: 84rem;
+  //   color: $extra-backcolor;
+  //   text-transform: uppercase;
+  //   right: 70%;
+  //   top:-25%;
+  //   transform: rotate(180deg);
+  //   z-index: -1;
+  //   @include md{
+  //     display: none;
+  //   }
+  // }
+  // max-width: 50%;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
+  @include lg{
+    width: 80%;
+  }
+  @include md{
+    width: 100%;
+  }
+}
