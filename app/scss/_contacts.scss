@@ -12,15 +12,23 @@
     color: $accent;
     font-size: 2.4rem;
     padding: 0 2rem;
+    @include sm{
+      font-size: 1.8rem;
+    }
     }
   }
   .violet_h{
-
     white-space: nowrap;
     font-size: 4.2rem;
     // padding: 2rem 0;
     padding-top: 4rem;
     padding-bottom: 0;
+    @include md{
+      font-size: 3rem;
+    }
+    @include sm{
+      font-size: 2.4rem;
+    }
   }
   .phone{
     border-top: 1px solid #ccc;
@@ -28,6 +36,9 @@
     font-size: 2.4rem;
     color: $text-dark;
     padding: 2rem 0;
+    @include sm{
+      font-size: 1.8rem;
+    }
   }
 }
 
@@ -39,6 +50,12 @@
   .dark_h{
     font-size: 4.2rem;
     padding-bottom: 2rem;
+    @include md{
+      font-size: 3rem;
+    }
+    @include sm{
+      font-size: 2.4rem;
+    }
   }
   // &:before{
   //   content: 'b';

@@ -19,28 +19,39 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
-	<link rel="stylesheet" href="css/main.min.css">
-	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+	<link rel="stylesheet" href="<?php echo base_url(); ?>content/ui/css/main.min.css?<?php echo time(); ?>">
+	<link rel="shortcut icon" href="<?php echo base_url(); ?>content/ui/img/favicon.png" type="image/png">
 </head>
 
 <body>
-	<header class="main_header">
+	<header class="main_header<?php switch($this->uri->segment(2)){
+        case 'dogs':
+            echo ' main_header_dogs';
+            break;
+        case 'one_dog':
+        case 'puppies':
+        case 'one_puppy':
+        case 'contacts':
+            echo ' main_header_dog';
+            break;
+    }; ?>">
 
 		<div class="header_menu_wrap">
 			<div class="header_menu">
 				<div class="logo_menu_align">
-					<a href="#" class="logo">
-						<img src="img\logo.png" alt="logo">
+					<a href="<?php echo base_url(); ?>" class="logo">
+						<img src="<?php echo base_url(); ?>content/ui/img/logo.png" alt="logo">
 					</a>
 				</div>
 			<div class="details">
 
 			<nav class="main_nav">
 				<ul class="flex_menu">
-					<li><a href="#">Наши собаки</a></li>
-					<li><a href="#">Наши щенки</a></li>
+					<li><a href="<?php echo base_url(); ?>ui/dogs">Наши собаки</a></li>
+					<li><a href="<?php echo base_url(); ?>ui/puppies">Наши щенки</a></li>
 					<li><a href="#">Блог</a></li>
-					<li><a href="#">Контакты</a></li>
+					<li><a href="#">Галерея</a></li>
+					<li><a href="<?php echo base_url(); ?>ui/contacts">Контакты</a></li>
 				</ul>
 			</nav>
 			<div class="contacts">

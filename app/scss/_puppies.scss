@@ -17,7 +17,7 @@
     text-transform: uppercase;
     right: 70%;
     top:-25%;
-    transform: rotate(180deg);
+    transform: scale(-1,1);
     z-index: -1;
     @include md{
       display: none;
@@ -50,6 +50,9 @@
   p{
     padding-bottom: 0;
     font-size: 1.4rem;
+  }
+  @include md{
+    padding: 0 0.5rem 2rem;
   }
 }
 .one_puppi{

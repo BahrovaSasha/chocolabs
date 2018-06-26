@@ -35,7 +35,7 @@
   overflow: hidden;
   // padding: 0 0.8rem;
   // top: 0;
-  min-height: 400px;//// на медиазапрос
+  min-height: 300px;//// на медиазапрос
   box-shadow: 0 8px 14px rgba(6,6,6,0.2);
   // padding-bottom: 2rem;
   &:hover .overlay {
@@ -72,7 +72,7 @@
     transform: translate(-50%,-50%);
   }
   @include lg{
-    min-height: 300px;
+    min-height: 200px;
   }
   @include md{
     min-height: 400px;
@@ -85,12 +85,18 @@ h5{
   font-size: 2rem;
   text-transform: uppercase;
   padding: 2.4rem 0;
+  @include lg{
+    font-size: 1.4rem;
+  }
+  @include md{
+    font-size: 2rem;
+  }
 }
 ul{
   padding: 2rem 0;
   li{
     font-family: $text-font;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     padding: 0.6rem 0;
   }
 }

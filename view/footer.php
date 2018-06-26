@@ -13,15 +13,16 @@
 			</div>
 			<div class="col-md-6 col-xs-12 address">
 				<p>Украина, Харьков</p>
-				
-				<p>+38(095) 304 64 10 Валентина</p>
+				<p><span class="emphasized_phone">+38(095) 304 64 10</span></p>
+				<p>Валентина</p>
 			</div>
 		</div>
 
 	</footer>
 
-
-	<script src="js/scripts.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="<?php echo base_url(); ?>content/ui/js/scripts.min.js"></script>
+    <script src="<?php echo base_url(); ?>content/ui/js/contact_us.js?<?php echo time(); ?>"></script>
 
 </body>
 </html>

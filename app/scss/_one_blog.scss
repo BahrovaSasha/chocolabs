@@ -1,97 +1,55 @@
-// .main_header_dog{
-//   min-height: 10.8rem;
-//   height: 10.8rem;
-//   @include md{
-//     min-height: 8rem;
-//     height: 8rem;
-//   }
-//   .background_img_dog{
-//     background-position: 0 25%;
-//     background-size: cover;
-//   }
-// }
-.dogs_info{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  // justify-content: space-between;
-  .more_inf{
-    padding-top: 4rem;
-    right: 1.5rem;
-    bottom: 0.5rem;
-  }
-  .dark_h{
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-  }
-}
 .one_article_info{
   padding: 4rem 0;
-.one_dog{
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  // padding: 0 0.8rem;
-  // top: 0;
-  min-height: 400px;//// на медиазапрос
-  box-shadow: 0 8px 14px rgba(6,6,6,0.2);
-  // padding-bottom: 2rem;
-  &:hover .overlay {
-    background-color: rgba(114, 107, 177, 0.5);
-    opacity: 1;
-  }
-  .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: $text-white;
-    font-size: 2.4rem;
-    text-align: center;
-    opacity: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 3%;
-    transition: all 0.5s ease;
-    span{
-      text-align: center;
+  .dogs_info{
+    &:before{
+      content: 'b';
+      position: absolute;
+      font-size: 84rem;
+      color: #f5f9fd;
+      text-transform: uppercase;
+      right: 50%;
+      top: -70%;
+      transform: scale(-1,1);
+      z-index: -1;
     }
   }
+}
+// .position_img{
+//     top: 10rem;
+//     @include md{
+//       top: 0;
+//     }
+// }
+.article_image{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 40rem;
+  box-shadow: 0 8px 14px rgba(6,6,6,0.2);
   img{
     position: absolute;
     width: auto;
     height: 100%;
     margin: 0 auto;
+    transform: translate(-50%,-50%);
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
-  }
-  @include lg{
-    min-height: 300px;
-  }
-  @include md{
-    min-height: 400px;
-  }
-  @include sm{
-    min-height: 300px;
   }
 }
-h5{
-  font-size: 2rem;
-  text-transform: uppercase;
-  padding: 2.4rem 0;
+.dog_video{
+  width:100%;
+  height: auto;
+  margin: 3rem 0;
+  background-color: $extra-accent;
 }
-ul{
-  padding: 2rem 0;
-  li{
-    font-family: $text-font;
-    font-size: 1.8rem;
-    padding: 0.6rem 0;
-  }
-}
+.blog_content{
+  padding: 6rem 0;
+  border-top: 1px solid #ccc;
+  h6{//не работает
+		padding: 1.4rem 0;
+		font-size: 1.6rem;
+		@include lg{
+			font-size: 1.4rem;
+		}
+	}
 }

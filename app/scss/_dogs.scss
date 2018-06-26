@@ -40,7 +40,7 @@
         font-size: 2.2rem;
       }
       @include sm{
-        font-size: 2rem;
+        font-size: 1.6rem;
       }
     }
     .violet_h{
@@ -53,7 +53,7 @@
         font-size: 6rem;
       }
       @include sm{
-        font-size: 4.5rem;
+        font-size: 3rem;//не перебивает
       }
     }
     @include rwd(1600){
@@ -64,11 +64,11 @@
       // top: 16rem;
     }
     @include sm{
-      width: 34rem;
+      width: 90%;
     }
-    @include xs{
-      width: 30rem;
-    }
+    // @include xs{
+    //   width: 28rem;
+    // }
   }
 
 
@@ -98,9 +98,12 @@
   min-height: 380px;
   .pic_top{
     margin-top: -6%;
-    @include md{
-      margin-top: 0;
+    @include xl{
+      margin-top: -2%;
     }
+    // @include md{
+    //   margin-top: 0;
+    // }
   }
   .one_dog{
     width: 100%;
@@ -149,8 +152,14 @@
   		top: 50%;
   		transform: translate(-50%,-50%);
   	}
-    @include lg{
+    @include rwd(1600){
       min-height: 200px;
+    }
+    @include xl{
+      min-height: 350px;
+    }
+    @include lg{
+      min-height: 300px;
     }
     @include md{
       min-height: 400px;
@@ -163,6 +172,9 @@
     font-size: 2rem;
     text-transform: uppercase;
     padding: 2.4rem 0;
+    @include xl{
+      padding: 1.5rem 0 3rem;
+    }
   }
   @include md{
     padding-top: 4rem;
