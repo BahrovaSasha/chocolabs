@@ -1,0 +1,64 @@
+.gallery_nav{
+  padding: 4rem 0;
+  text-transform: uppercase;
+  ul{
+  display: flex;
+  justify-content: space-between;
+  li{
+    white-space: nowrap;
+    padding-bottom: 2rem;
+    a:active{
+    color: $accent;//не работает
+    border-bottom: 2px solid $accent;
+    }
+  }
+  @include sm{
+    flex-direction: column;
+  }
+  }
+  @include lg{
+    font-size: 1.4rem;
+  }
+  @include md{
+    font-size: 1rem;
+  }
+}
+.gallery_col{
+  padding-bottom: 3rem;
+}
+.gallery_photo{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  box-shadow: 0 8px 14px rgba(6,6,6,0.2);
+  img{
+    position: absolute;
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    @include lg{
+      width: 100%;
+      height: auto;
+    }
+    @include md{
+      width: auto;
+      height: 100%;
+    }
+  }
+  @include rwd(1600){
+    min-height: 250px;
+  }
+  @include lg{
+    min-height: 200px;
+  }
+  @include md{
+    min-height: 400px;
+  }
+  @include sm{
+    min-height: 250px;
+  }
+}

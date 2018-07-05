@@ -611,7 +611,7 @@ body {
 		&:before{
 			width: 32rem;
 			height: 32rem;
-			left: -12%;
+			left: -14%;
 		}
 		h1{
 			font-size: 4rem;
@@ -1451,7 +1451,28 @@ body {
 
 
 	.foot_content{
-		padding: 10rem 0 ;
+		padding: 10rem 0;
+		&:before{
+			content: '';
+			position: absolute;
+			border: 16px solid rgba(114, 107, 177, 0.4);
+			// z-index: 0;
+			height: 20rem;
+			width: 40%;
+			right: -5%;
+			top: 28%;
+			@include lg{
+				right: 0;
+				top:20%;
+			}
+			@include md{
+				width: 100%;
+				top: 60%;
+			}
+			@include sm{
+				top: 58%;
+			}
+		}
 		h2,p{
 			color: $text-white;
 			margin-bottom: 0;
@@ -1492,27 +1513,22 @@ body {
 			@include xs{
 				padding-right: 3rem;
 			}
-			&:before{
-				content: '';
-				position: absolute;
-				border: 16px solid rgba(114, 107, 177, 0.4);
-				z-index: 0;
-				height: 20rem;
-				width: 90%;
-				left: 20%;
-				top: 15%;
-				@include lg{
-					left: 10%;
-				}
-				@include md{
-					width: 100%;
-					left: 0;
-					height: 24rem;
-				}
-			}
+
 			.emphasized_phone{
 				font-weight: bold;
 				font-family: $default-font;
+				padding-bottom: 2rem;
+				// z-index: 10;
+				a{
+					color: $text-white;
+					transition: 0.3s;
+					&:hover{
+							text-decoration: none;
+							color: $extra-accent;
+							cursor: pointer;
+					}
+				}
+
 			}
 		}
 		@include lg{
@@ -1521,6 +1537,43 @@ body {
 		}
 	}
 
+	// .mfp-with-fade {
+	//
+	//   // before-open state
+	//   .mfp-content,
+	//   .mfp-arrow,
+	//   &.mfp-bg {
+	//     opacity: 0;
+	//     -webkit-backface-visibility: hidden;
+	//     -webkit-transition: opacity 0.3s ease-out;
+	//     -moz-transition: opacity 0.3s ease-out;
+	//     -o-transition: opacity 0.3s ease-out;
+	//     transition: opacity 0.3s ease-out;
+	//   }
+	//
+	//
+	//   // open state
+	//   &.mfp-ready {
+	//     .mfp-content,
+	//     .mfp-arrow {
+	//       opacity: 1;
+	//     }
+	//     &.mfp-bg {
+	//       opacity: 0.8; // background opacity
+	//     }
+	//   }
+	//
+	//   // closed state
+	//   &.mfp-removing {
+	//     .mfp-content,
+	//     .mfp-arrow,
+	//     &.mfp-bg {
+	//       opacity: 0;
+	//     }
+	//   }
+	//
+	//
+	// }
 
 
 
@@ -1531,4 +1584,6 @@ body {
 @import "puppies";
 @import "contacts";
 @import "blog";
-@import "one_blog"
+@import "one_blog";
+@import "gallery";
+@import "magnific-popup";
