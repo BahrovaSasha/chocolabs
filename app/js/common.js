@@ -97,6 +97,26 @@ $(function() {
   //   scrollTop: $($.attr(this, 'href')).offset().top - 600
   //   }, 500);
   // });
+  // $('#first-dog-tab').click(function(e) {
+  //   e.preventDefault()
+  //   $(this).tab('show')
+  // });
+  //
+  // $('#second-dog-tab').click(function(e) {
+  //   e.preventDefault()
+  //   $(this).tab('show')
+  // });
+  //
+  // $('#third-dog-tab').click(function(e) {
+  //   e.preventDefault()
+  //   $(this).tab('show')
+  // });
+  //
+  // $('#fourth-dog-tab').click(function(e) {
+  //   e.preventDefault()
+  //   $(this).tab('show')
+  // });
+
 });
 // $(document).ready(function(){
 //   $('.for_arrow').append('<span href="#" class="arrow" id="go-top"><i class="fas fa-angle-up"></i></span>');
@@ -107,12 +127,15 @@ $(function() {
    // if ($(window).scrollTop() > "0") $(this).fadeOut("slow")
    var scrollDiv = $(this);
   $(window).scroll(function() {
-   if ($(window).scrollTop() <= "250") $(scrollDiv).fadeOut("slow")
+   if ($(window).scrollTop() <= "400") $(scrollDiv).fadeOut("slow")
    // else if($(window).scrollTop() >= "1000") $(".arrow").css("position","absolute")///////////////////////
    else $(scrollDiv).fadeIn("slow")
   });
+  // $(this).on('click',function() {
+  //  $("html, .for_arrow").animate({scrollTop: 300}, "slow")
+  // })
   $(this).on('click',function() {
-   $("html, .for_arrow").animate({scrollTop: 0}, "slow")
+   $("html, .for_arrow").animate({scrollTop: 300}, "slow")
   })
  }
 });

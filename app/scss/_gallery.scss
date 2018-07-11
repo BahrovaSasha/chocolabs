@@ -1,15 +1,18 @@
 .gallery_nav{
   padding: 4rem 0;
   text-transform: uppercase;
-  ul{
+  div{
   display: flex;
   justify-content: space-between;
   li{
+    list-style-type: none;
     white-space: nowrap;
-    padding-bottom: 2rem;
-    a:active{
-    color: $accent;//не работает
-    border-bottom: 2px solid $accent;
+    padding: 0 2rem 2rem;
+    a{
+      &:active{
+      color: $accent;//не работает
+      border-bottom: 2px solid $accent;
+      }
     }
   }
   @include sm{

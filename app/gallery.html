@@ -21,6 +21,7 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 	<link rel="shortcut icon" href="img/favicon.png" type="image/png">
+
 </head>
 
 <body>
@@ -60,14 +61,22 @@
 	</header>
 
 	<main class="container_small">
-		<div class="gallery_nav">
+		<nav class="gallery_nav">
+			<div class="nav nav-tabs" id="nav-tab" role="tablist">
+				<li><a class="nav-item nav-link active" id="first-dog-tab" data-toggle="tab" href="#first-dog" role="tab" aria-controls="nav-home" aria-selected="true">Holstep’s Backardy</a></li>
+				<li><a class="nav-item nav-link" id="second-dog-tab" data-toggle="tab" href="#second-dog" role="tab" aria-controls="nav-profile" aria-selected="false">Kaytan Christmas Star</a></li>
+				<li><a class="nav-item nav-link" id="third-dog-tab" data-toggle="tab" href="#third-dog" role="tab" aria-controls="nav-contact" aria-selected="false">Holstep’s Healt Resort</a></li>
+				<li><a class="nav-item nav-link" id="fourth-dog-tab" data-toggle="tab" href="#fourth-dog" role="tab" aria-controls="nav-contact" aria-selected="false">Holstep’s Backardy</a></li>
+			</div>
+		</nav>
+		<!-- <div class="gallery_nav">
 			<ul>
-				<li><a href="#">Holstep’s Backardy</a></li>
+				<li><a href="#" class="active">Holstep’s Backardy</a></li>
 				<li><a href="#">Kaytan Christmas Star</a></li>
 				<li><a href="#">Holstep’s Healt Resort</a></li>
 				<li><a href="#">Holstep’s Backardy</a></li>
 			</ul>
-		</div>
+		</div> -->
 		<!-- <div class="popup-gallery">
 			<a href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg" title="The Cleaner"><img src="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_s.jpg" width="75" height="75"></a>
 			<a href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg" title="Winter Dance"><img src="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_s.jpg" width="75" height="75"></a>
@@ -91,7 +100,8 @@
 		</div> -->
 
 
-		<div class="row">
+		<div class="tab-content" id="nav-tabContent">
+			<div class="row tab-pane fade show active" id="first-dog" role="tabpanel" aria-labelledby="first-dog-tab">
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col ">
 				<div class="gallery_photo popup-gallery">
 					<a href="img\dog6.jpg" class="image-link">
@@ -101,22 +111,6 @@
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
 				<div class="gallery_photo popup-gallery">
-					<a href="img\dog3.jpg" class="image-link">
-						<img src="img\dog3.jpg" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
-				<div class="gallery_photo popup-gallery">
-					<a href="img\dog5.jpg" class="image-link">
-						<img src="img\dog5.jpg" alt="">
-					</a>
-				</div>
-			</div>
-
-
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
-				<div class="gallery_photo popup-gallery">
 					<a href="img\dog6.jpg" class="image-link">
 						<img src="img\dog6.jpg" alt="">
 					</a>
@@ -124,11 +118,36 @@
 			</div>
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
 				<div class="gallery_photo popup-gallery">
+					<a href="img\dog6.jpg" class="image-link">
+						<img src="img\dog6.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+ 		<div class="row tab-pane fade" id="second-dog" role="tabpanel" aria-labelledby="second-dog-tab">
+			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+				<div class="gallery_photo popup-gallery">
 					<a href="img\dog3.jpg" class="image-link">
 						<img src="img\dog3.jpg" alt="">
 					</a>
 				</div>
 			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+				<div class="gallery_photo popup-gallery">
+					<a href="img\dog3.jpg" class="image-link">
+						<img src="img\dog3.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+				<div class="gallery_photo popup-gallery">
+					<a href="img\dog3.jpg" class="image-link">
+						<img src="img\dog3.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="row tab-pane fade" id="third-dog" role="tabpanel" aria-labelledby="third-dog-tab">
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
 				<div class="gallery_photo popup-gallery">
 					<a href="img\dog5.jpg" class="image-link">
@@ -136,19 +155,10 @@
 					</a>
 				</div>
 			</div>
-
-
 			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
 				<div class="gallery_photo popup-gallery">
-					<a href="img\dog6.jpg" class="image-link">
-						<img src="img\dog6.jpg" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
-				<div class="gallery_photo popup-gallery">
-					<a href="img\dog3.jpg" class="image-link">
-						<img src="img\dog3.jpg" alt="">
+					<a href="img\dog5.jpg" class="image-link">
+						<img src="img\dog5.jpg" alt="">
 					</a>
 				</div>
 			</div>
@@ -160,6 +170,31 @@
 				</div>
 			</div>
 		</div>
+
+	<div class="row tab-pane fade" id="fourth-dog" role="tabpanel" aria-labelledby="fourth-dog-tab">
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+			<div class="gallery_photo popup-gallery">
+				<a href="img\dog7.jpg" class="image-link">
+					<img src="img\dog7.jpg" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+			<div class="gallery_photo popup-gallery">
+				<a href="img\dog7.jpg" class="image-link">
+					<img src="img\dog7.jpg" alt="">
+				</a>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 gallery_col">
+			<div class="gallery_photo popup-gallery">
+				<a href="img\dog7.jpg" class="image-link">
+					<img src="img\dog7.jpg" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	</div>
 	</main>
 
 	<footer class="footer_background dark-overlay">
@@ -186,6 +221,6 @@
 
 
 	<script src="js/scripts.min.js"></script>
-
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>

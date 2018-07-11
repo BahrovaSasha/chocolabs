@@ -37,8 +37,10 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/slick/slick.min.js',
 		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
+
+		'app/libs/slick/slick.min.js',
+		// 'app/libs/bootstrap/bootstrap.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

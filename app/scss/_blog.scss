@@ -94,29 +94,26 @@
   .arrow{
     display: block;
     z-index: 100;
+    @viewport{
+      display:none;
+    }
   }
 }
 #go-top {
   position: fixed;
-  bottom: 10%;
-  right:20%;
-  @include rwd(1600){
-    right: 15%;
-  }
-  @include xl{
-    right: 10%;
-  }
-  @include lg{
-    right: 6%;
-  }
+  bottom: 60%;
+  right:1%;
+  display: none;
   @include md{
-    right:4%;
-  }
-  @include sm{
-
+    right: -0.6rem;
+    // display: none;
   }
 }
-
+// @viewport {
+//   #go-top {
+//     display: none;
+//   }
+// }
 // .fixed_arrow{
 //   display: block;
 // }
@@ -150,7 +147,7 @@
     margin-top: 0;
   }
   @include sm{
-    width: 90%;
+    width: 76%;
   }
 }
 .one_article{
@@ -174,6 +171,9 @@
     }
     @include md{
       height: 30rem;
+    }
+    @include sm{
+      height: 20rem;
     }
   }
 }
